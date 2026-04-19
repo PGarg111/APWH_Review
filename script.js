@@ -180,8 +180,103 @@ const subUnits = {
         </div>
         `,
         videos: [
-            {title: "Developments in EAST ASIA [AP World Review Unit 1 Topic 1]", id: "HfIWZhXt7fY&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=1"}
+            {title: "Developments in EAST ASIA [AP World Review Unit 1 Topic 1]", id: "HfIWZhXt7fY&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=1"},
             {title: "Developments in DAR-AL-ISLAM [AP World Review—Unit 1 Topic 2]", id: "O9P1TaBnhg8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=2"}
+        ],
+        mcqs: [
+            {
+                question: "Questions 1-3 refer to the passage. [Hangzhou , China, has] ten principal markets .... [They] are all squares of half a mile to the side, and along their front passes the main street, which is 40 paces in width, and runs straight from end to end of the city, crossing many bridges of easy and commodious [convenient] approach .. . . So also parallel to this great street, but at the back of the market places, there runs a very large canal, on the bank of which towards the squares are built great houses of stone , in which the merchants from India and other foreign parts store their wares, to be handy for the markets. In each of the squares is held a market three days in the week, frequented by 40,000 or 50,000 persons.  - Marco Polo. The Travels of Marco Polo, c. L300. Based on the passage, which of the statements concerning the trading city of Hangzhou is most accurate?",
+                options: [
+                    "Foreigners were not welcome in Chinese trading cities, because they were considered barbarians and had nothing of value to trade.",
+                    "Many of the people coming to trade in cities in China were Europeans traveling along the Silk Roads.",
+                    "Hangzhou was a vital trading city because it had foreign merchants and was also accessible by the Grand Canal for internal trade.",
+                    "Chinese imperial governments limited the number of markets in Hangzhou to just a few centrally-located areas of the city. "
+                ],
+                correct: 2,
+                explanation: "The text explicitly states, '...in which the merchants from India and other foreign parts store their wares.' This confirms that the city was a hub for international commerce. The text mentions that 'there runs a very large canal.' In the historical context of Hangzhou, this refers to the Grand Canal, which was crucial for internal trade and connecting the city to the rest of the empire. Status as a Trading City: The description of 'ten principal markets,' the massive infrastructure (wide streets and bridges), and the high volume of people (40,000 to 50,000) all point to Hangzhou being a bustling, vital trading hub."
+            },
+            {
+                question: "What development, which began before the passage above written, allowed Europeans to obtain the products of East Asia?",
+                options: [
+                    "Chinese dynasties, such as the Tang and the Song, grew stronger, so long-distance trade could be conducted with less risk.",
+                    "New maritime technology allowed for ocean-going ships to establish trade routes from Asia to Europe via Souther Africa",
+                    "The Tang Dynasty expanded into the Middle East, so the trade routes between Europe and Africa were under one ruler.",
+                    "With the defeat of the Islamic caliphates, Europeans were able to establish direct contact with the Tang and the Song dynasties. "
+                ],
+                correct: 0,
+                explanation: "During the Tang (618–907) and Song (960–1279) dynasties, China was under strong, centralized rule. This political stability allowed the government to police trade routes, eliminate banditry, and maintain infrastructure—all of which made long-distance commerce safer. When routes are safe, merchants are more willing to invest in long-distance travel. These dynasties created an environment where foreign merchants (often Arab, Persian, or Central Asian) could safely bring goods from China to trade hubs, where they were then transported further west toward Europe. This 'security umbrella' was a prerequisite for the luxury goods trade to flourish before the 14th century."
+            },
+            {
+                question: "What products would Indians and other non-Chinese merchants be most likely to purchase in a market such as the one described in the passage?",
+                options: [
+                    "silk, porcelain, and tea",
+                    "pepper, nutmeg, and cinnamon",
+                    "cows, pigs, and oxen",
+                    "rugs, parchment, and horses "
+                ],
+                correct: 0,
+                explanation: "During the Song and Yuan dynasties, China was world-renowned for these three specific luxury goods. They were high-value, relatively lightweight, and in immense demand across the rest of the world, including India, the Middle East, and Europe. Foreign merchants traveled to major Chinese trading hubs like Hangzhou specifically to acquire these rare, high-quality items to sell back in their home regions for a significant profit."
+            }
+        ],
+        saqs: [
+            {
+                prompt: "Use the passage below to answer all parts of the question that follows.",
+                source: '"The Moral Nature Being uptight and modest, reserved and quiet, correct and dignified , sincere and honest: these constitute the moral nature of a woman. Being filial and respectful, humane and perspicacious [shrewd, wise], loving and warm. meek and gentle: these represent the complete development of the moral nature. The moral nature of being.innate in our endowment, it becomes transformed and fulfilled through practice. It is not something that comes from the outside but is actually rooted in our very selves. Cultivation of the Self .. . Now if the self is not cultivated, then vi1tue will not be established. If one\'s virtue is not established, rarely can one be an influence for good in the family - bow much less in. the wider world. Therefore, the wife is one who follows her husband. The way of husband and wife is the principle of the strong and the weak. In the past, the reason why enlightened monarchs were careful about establishing marriage was that they valued the way of procreation and perpetuation. [The rise and faU of the state is intimately linked to the prosperity or decline of the family.] " Empress Xu, Instructions for the Inner Quarters. c. J 420',
+                parts: [
+                    {label: "Part A", prompt: "Describe ONE way in which Xu's argument was influenced by long-standing Asian cultural traditions."},
+                    {label: "Part B", prompt: "Explain ONE example of Xu's recommendations to Chinese women that cross boundaries of gender in the period between c. 1200 and c. 1450."},
+                    {label: "Part C", prompt: "Explain ONE historical situation from c. 1200- c. 1450 in which states in Asia attempted to limit Chinese political power or cultural influence."}
+                ]
+            }
         ]
     }
+}
+
+
+function showPage(padeID, unitID) {
+    document.querySelectorAll('.page').forEach(page => {
+        if (page.id === pageId) {
+            page.classList.remove('hidden');
+        }
+        else {
+            page.classList.add('hidden');
+        }
+    });
+
+    document.querySelectorAll('.navbar-button').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.textContent.toLowerCase().replace(' ', '') === pageId || (pageID === 'unit-detail' && btn.textContent === 'Units')) {
+            btn.classList.add('active');
+        }
+    });
+
+    if (pageId === 'unit-detail' && unitId) {
+        loadUnitDetail(unitId);
+    }
+}
+
+function renderUnitCards(containerId, limit) {
+    const container = document.getElementById(containerId);
+    const units = limit ? Units.slice(0, limit): Units;
+    container.innerHTML = units.map(u => 
+        `<div class="unit-card" onclick="showPage('unit-detail', ${u.id})">
+            <div class="unit-number">Unit ${u.id}</div>
+            <h3>${u.title}</h3>
+            <p>${u.desc}</p>
+            <span class="unit-period">${u.period}</span>
+        </div>`
+    ).join('');
+}
+
+function UnitDetails(unitId) {
+    const unit = Units.find(u => u.id === unitId);
+    if (!unit) return;
+
+    document.getElementById('unit-detail-title').textContent = `Unit ${unit.id}: ${unit.title}`;
+    document.getElementById('unit-detail-tag').textContent = unit.period;
+
+    const tabsEl = document.getElementById('subsection-tabs');
+    tabsEl.innerHTML = unit.subs.map((sub, i) => 
+    `<button class="sub-tab ${i === 0 ? 'active': ''}" onclick="switchSub('${sub}', this)">${sub}</button`
+    ).join('');
 }
