@@ -233,7 +233,7 @@ const subUnits = {
 }
 
 
-function showPage(padeID, unitID) {
+function showPage(pageId, unitId) {
     document.querySelectorAll('.page').forEach(page => {
         if (page.id === pageId) {
             page.classList.remove('hidden');
@@ -245,13 +245,13 @@ function showPage(padeID, unitID) {
 
     document.querySelectorAll('.navbar-button').forEach(btn => {
         btn.classList.remove('active');
-        if (btn.textContent.toLowerCase().replace(' ', '') === pageId || (pageID === 'unit-detail' && btn.textContent === 'Units')) {
+        if (btn.textContent.toLowerCase().replace(' ', '') === pageId || (pageId === 'unit-detail' && btn.textContent === 'Units')) {
             btn.classList.add('active');
         }
     });
 
     if (pageId === 'unit-detail' && unitId) {
-        loadUnitDetail(unitId);
+        UnitDetails(unitId);
     }
 }
 
@@ -279,4 +279,29 @@ function UnitDetails(unitId) {
     tabsEl.innerHTML = unit.subs.map((sub, i) => 
     `<button class="sub-tab ${i === 0 ? 'active': ''}" onclick="switchSub('${sub}', this)">${sub}</button`
     ).join('');
+
+    const panelsEl = document.getElementById('subsection-panels');
+    panelsEl.ATTRIBUTE_NODE.innerHTML = unit.subs.map((sub, i) => {
+        const data = subUnits[sub];
+        if (!data) return`
+        <div class="subsection-content ${i === 0 ? 'active': ''}" id="sub-${sub}">
+            <p style="color: var(--text-dim); font-style: italic;">Content for ${sub} coming soon - adding subsections</p>
+        </div>
+        `;
+
+        return`
+        <div class="subsection-content ${i === 0 ? 'active' : ''}" id="sub-${sub}">
+        <div class="content-tabs">
+          <button class="content-tab active" onclick="switchContentTab('${sub}', 'breakdown', this)">Breakdown</button>
+          <button class="content-tab" onclick="switchContentTab('${sub}', 'mcq', this)">MCQ</button>
+          <button class="content-tab" onclick="switchContentTab('${sub}', 'saq', this)">SAQ</button>
+          <button class="content-tab" onclick="switchContentTab('${sub}', 'videos', this)">Videos</button>
+        </div>
+
+        <div class="content-panel active" id ="panel-${sub}-breakdown">
+            <div class="breakdown-prose">${data.breakdown}</div>
+        </div>
+        `
+    })
 }
+
