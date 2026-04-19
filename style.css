@@ -112,7 +112,55 @@ a:hover{
 
 .unit-grid {
     background: var(--bg2);
-    
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+}
+
+.unit-card::before {
+    content: '';
+    position: absolute;
+    background: var(--gold);
+    width: 3px;
+    height: 100%;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.unit-card:hover {
+    border-color: var(--gold-dim);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px black;
+}
+
+.unit-card:hover::before {
+    opacity: 1;
+}
+
+.unit-number {
+    font-size: 4.2px;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.unit-card h3 {
+    color: var(--cream);
+    font-size: 6.4px;
+}
+
+.unit-card p {
+    font-size: 10px;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+
+.unit-period {
+    display: inline-block;
+    color: var(--gold-dim);
+    border: 1px solid var(--gold-dim);
+    padding: 2px 8px;
+    border-radius: 2px;
 }
 
 .section-header {
