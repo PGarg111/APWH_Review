@@ -72,12 +72,116 @@ const Units = [
                 "In the 1800s and early 1900s, industrialization societies in Africa and Asia, but the process of industrialization varied from country to country. Develop an argument that evaluates the extent to which the process of industrialization in Egypt under Muhammad Ali and in Japan during the Meiji Era were similar or different.",
                 "Enlightenment ideals and the concepts of nationalism swept the Atlantic world from 1750 to 1900 as people developed new standards of freedom and self-determination. Developed an argument that evaluates the extent to which intellectual and ideological causes influenced the revolutions that occurred in the Atlantic world during that era.",
                 "New inventions contributed greatly to industrialization from 1750 to 1900 in Eurasia, Africa, and the Americas, but agricultural productivity and natural resources also played a part. Developed an argument that evaluates the extent to which environmental factors contributed to industrialization from 1750 to 1900.",
-                "In the period from 1750 to 1900, businesses in Eurasia, the Americas, and Africa."
+                "In the period from 1750 to 1900, businesses in Eurasia, the Americas, and Africa developed new technologies and new types of business organizations. Develop an argument that evaluates the extent to which the technologies and types of business organizations in Russia, the United States, and China were similar or different from 1750 to 1900."
             ]
         },
         dbq: {
-            prompt: "Using the documents and your knowledge of world history, develop an argument that evaluates the extent to which states managed to consolidate and expand their power during the period 1450 and 1750.",
-            note: "assests/notes/unit4DBQ.pdf"
+            prompt: "Using the documents and your knowledge of world history, evaluate the extent to which the roles of women in Japan and Argentina were similar or different in the period from 1850s to 1920s.",
+            note: "assests/notes/unit5DBQ.pdf"
+        }
+    },
+    {id: 6, title: "Consequences of Industrialization", period: "c. 1750 to c. 1900", 
+        desc: "Focuses on the consequences of industrialization, specifically how industrial nations used their economic power to establish global empires.", 
+        subs: ["6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8"],
+        leq: {
+            prompts: [
+                "In the period 1750 to 1900, some European powers suffered a decrease in influence, and new empires emerged-one in the Americas and one in Asia. Develop an argument that evaluates the extent to which the global balance of power shifted during that era.",
+                "From 1750 to 1900, nationalist movements emerged throughout South America, Africa, and Asia as resistance to imperialist powers increased. Develop an argument that evaluates the extent to which internal factors influenced the process of state building during that era.",
+                "European powers divided up much of Africa and India from 1750 to 1900, but indigenous peoples had their own opinions about imperialism. Develop an argument that evaluates the extent to which the responses of native people to imperialism were similar in India and Sub-Saharan Africa between 1750 and 1900.",
+                "As the economy grew increasingly global from 1750 to 1900, working people in Eurasia, the Americas, Australia, and Africa began moving into urban centers and across borders, but many had the same motivations their ancestors had. Develop an argument that evaluates the extent to which the migration pattens from 1750 to 1900 show changes or continuities over time."
+            ]
+        },
+        dbq: {
+            prompt: "Using the documents and your knowledge of world history, evaluate the extent to which imperialism influenced state formation and contraction around the world in the period 1750 to 1900.",
+            note: "assests/notes/unit6DBQ.pdf"
+        }
+    },
+    {id: 7, title: "Global Conflicts After 1900", period: "c. 1900 - Present", 
+        desc: "Focuses on global conflicts, covering the causes, conduct, and consequences of World War I and II, spanning 1900 and 1945.", 
+        subs: ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9"],
+        leq: {
+            prompts: [
+                "From 1900 to the present, political and economic events have triggered global conflicts. Develop an argument that evaluates the extent to which different causes of global conflict are significant in the period 1900 to the present.",
+                "The Paris Peace Conference after World War I bad even more profound effects on the world than the war did. Develop an argument that evaluates th e extent to which the 1919 Paris Peace Conference after World War 1 was a success or a failure . ",
+                "Adolf Hitler's campaign of terror against Jews in the 1930s and 1940s had its roots in earlier discrimination against Jews in Europe. Develop an argument that evaluates the extent to which the nature of anti-Semitism in Europe from the Middle Ages through World War II shows continuities or changes over time.",
+                "Conflicts over territory helped cause two world wars in the 20th century, but they also led to self-rule for many peoples worldwide in the 20th and 21st centuries. Develop an argument that evaluates the extent to which territorial holdings from 1900 to present show continuity or change over time."
+            ]
+        },
+        dbq: {
+            prompt: "Using the documents and your knowledge of world history, develop an argument that evaluates the extent to which world leaders failed to prevent a regional conflict between Austria-Hungary and Serbia after the assassination of Franz Ferdinand from becoming a general European war.",
+            note: "assests/notes/unit7DBQ.pdf"
+        }
+    },
+    {id: 8, title: "Cold War and Decolonization", period: "c. 1900 - Present", 
+        desc: "Focuses on Cold War ideological conflict between the U.S. and USSR, and simultaneous wave of decolonization.", 
+        subs: ["8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "8.7", "8.8"],
+        leq: {
+            prompts: [
+                "After World War II, Europe weakened and the Soviet Union and the United States emerged as superpowers, creating policies that affected postcolonial states. Develop an argument evaluating the extent to which the effects of the Cold War were similar or different in the Eastern and Western Hemispheres.",
+                "During the Cold War, the United States and the Soviet Union used technology, military might, and economic power to promote their competing ideologies. Develop an argument that evaluates the extent to which the ways the United States and the Soviet Union sought to maintain influence over the course of the Cold War were similar or different.",
+                "After 1900, countries in Eurasia, Africa, and Latin America experienced communist revolutions or insurrections, many of which involved land reform. Develop an argument that evaluates the extent to which various causes and effects of movements to redistribute economic resources were significant.",
+                "From 1900 to the present, colonies in Africa, Latin America, and Asia developed nationalist movements and became independent states. Develop an argument evaluating the extent to which the process of decolonization resulted in economic change or continuity over time."
+            ]
+        },
+        dbq: {
+            prompt: "Using the documents and your knowledge of world history, develop an argument that evaluates the extent to which decolonization had an impact on the political actions of former colonial powers and newly independent nations during the Cold War.",
+            note: "assests/notes/unit8DBQ.pdf"
+        }
+    },
+    {id: 9, title: "Globalization after 1900", period: "c. 1900 - Present", 
+        desc: "Focuses on globalization, examining how technology, communication, and economic shifts created an increasingly interconnected world.", 
+        subs: ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9"],
+        leq: {
+            prompts: [
+                "From 1900 to the present, changes in transportation and communication led to a more interconnected world. Develop an argument that evaluates the extent to which these technological advances resulted in political and social changes in that era. ",
+                "From 1900 to the present, increasing globalization has made transportation faster and easier, but it has also caused pandemics to become more widespread. Develop an argument that evaluates the extent to which the effects of the influenza pandemic of 1918-1919 were similar to, or different from, the HIV/ AIDS epidemic that began in the 1980s. ",
+                "After 1900, religious and ideological differences led to the partition of some states in Eurasia so their peoples could have independence. Develop an argument that evaluates the extent to which the partition of India in 1947 and the partition of Palestine in 1948 were similar or different.",
+                "After World War II, capitalist and communist powers divided up and heavily influenced the territories of Germany and Korea. Develop an argument that evaluates the extent to which the partition of Germany and the partition of Korea were similar or different between 1945 and the present."
+            ]
+        },
+        dbq: {
+            prompt: "Using the documents and your knowledge of world history, develop an argument that evaluates the extent to which human health is linked to a country's status as a developing or a developed nation.",
+            note: "assests/notes/unit9DBQ.pdf"
         }
     }
 ]
+
+const subUnits = {
+    "1.1": {
+        label: "Developments in East Asia",
+        breakdown:`
+        <h4>Overview</h4>
+        <h5>Revival of Large Empires</h5>
+        <ul>
+            <li>Song Dynasty most innovative in Afro-Eurasia and Americas - latest in series of states ruled a unified, prosperous China</li>
+        </ul>
+        <h4>Key Terms</h4>
+        <div class="key-terms">
+            <span class="key-term">Champa rice</span>
+            <span class="key-term">Proto-industrialization</span>
+            <span class="key-term">Artisans</span>
+            <span class="key-term">Scholar Gentry</span>
+            <span class="key-term">Filial Piety</span>
+            <span class="key-term">Grand Canal</span>
+            <span class="key-term">Imperial bureaucracy</span>
+            <span class="key-term">Meritocracy</span>
+            <span class="key-term">Woodblock printing</span>
+            <span class="key-term">Foot binding</span>
+            <span class="key-term">Buddhism</span>
+            <span class="key-term">Theravada Buddhism</span>
+            <span class="key-term">Mahayana Buddhism/span>
+            <span class="key-term">Tibetan Buddhism</span>
+            <span class="key-term">Syncretic</span>
+            <span class="key-term">Chan (Zen) Buddhism</span>
+            <span class="key-term">Neo-Confucianism</span>
+            <span class="key-term">Heian Period</span>
+            <span class="key-term">Nuclear families</span>
+            <span class="key-term">Polygyny</span>
+        </div>
+        `,
+        videos: [
+            {title: "Developments in EAST ASIA [AP World Review Unit 1 Topic 1]", id: "HfIWZhXt7fY&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=1"}
+            {title: "Developments in DAR-AL-ISLAM [AP World Review—Unit 1 Topic 2]", id: "O9P1TaBnhg8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=2"}
+        ]
+    }
+}
