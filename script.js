@@ -286,7 +286,7 @@ function UnitDetails(unitId) {
 
     const tabsEl = document.getElementById('subsection-tabs');
     tabsEl.innerHTML = unit.subs.map((sub, i) =>
-        `<button class="sub-tab ${i === 0 ? 'active' : ''}" onclick="switchSub('${sub}', this)">${sub}</button`
+        `<button class="sub-tab ${i === 0 ? 'active' : ''}" onclick="switchSub('${sub}', this)">${sub}</button>`
     ).join('');
 
     const panelsEl = document.getElementById('subsection-panels');
@@ -328,7 +328,7 @@ function UnitDetails(unitId) {
                 ${data.videos.map(v => `
                     <div class="video">
                         <div class="video-embed">
-                            <iframa src="https://www.youtube.com/embed/${v.id}" allowfullscreen loading="lazy"></iframe>
+                            <iframe src="https://www.youtube.com/embed/${v.id}" allowfullscreen loading="lazy"></iframe>
                         </div>
                         <div class="video-info">
                             <h4>${v.title}</h4>
@@ -349,7 +349,7 @@ function UnitDetails(unitId) {
 
 function switchSub(sub, btn) {
     document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('sub-content').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.sub-content').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('sub-' + sub).classList.add('active');
 }
@@ -367,7 +367,7 @@ function renderMCQ(q, id) {
     return `
     <div class="question-block">
         <div class="question-num">MCQ - Question ${id.toUpperCase()}</div>
-        <div class="question-text">${q.q}</div>
+        <div class="question-text">${q.question}</div>
         <div class="answer-options">
             ${q.options.map((opt, i) => `
                 <button class="answer-button" onclick="checkAnswer(this, ${i}, ${q.correct}, '${id})" id="ans-${id}-${i}">
@@ -388,7 +388,7 @@ function checkAnswer(bt, chose, correct, id) {
     const parent = btn.closest('.question-block');
     parent.querySelectorAll('.answer-button').forEach(b => b.disabled = true);
 
-    if (chosen === correct) {
+    if (chose === correct) {
         btn.classList.add('correct');
     }
     else {
@@ -405,15 +405,15 @@ function renderSAQ(s, id) {
         <p class="saq-prompt">${s.prompt}</p>
         ${s.source ? `<blockquote style="border-left: 3px solid var(--gold-dim); padding-left: 16px; margin: 0 0 20px; font-style: italic; color: var(--text-dim);
             font-size: 14px;">${s.source}</blockquote>` : ''}
-        <div class=saq-parts">
+        <div class="saq-parts">
             ${s.parts.map((p, pi) => `
                 <div class="saq-part">
                     <label>${p.label} - ${p.prompt}</label>
-                    <textarea id="saq-${id}-${pi}" placeholder="Write your resonse here..."></textarea>
+                    <textarea id="saq-${id}-${pi}" placeholder="Write your response here..."></textarea>
                 </div>
                 `).join('')}
         </div>
-        <button class="button primary" onclick"gradeSAQ('${id}', ${s.parts.length})">Get AI Feedback</button>
+        <button class="button primary" onclick="gradeSAQ('${id}', ${s.parts.length})">Get AI Feedback</button>
         <div class="ai-feedback" id="saq-feedback-${id}">
             <div class="ai-feedback-head">AI Grader Feedback</div>
             <div id="saq-feedback-content-${id}"></div>
@@ -426,7 +426,7 @@ function renderUnitLEQ(unit) {
     const prompts = unit.leq.prompts;
     return `
     <div class="unit-essay-section">
-        <div class="section-head" style="margin-top: 35px;>
+        <div class="section-head" style="margin-top: 35px;">
             <h2>Unit ${unit.id} LEQ</h2>
             <span class="tag">Long Essay Question. Choose one prompt from below</span>
         </div>
@@ -437,7 +437,7 @@ function renderUnitLEQ(unit) {
         
         <div class="essay-picker" id="led-picker-${unit.id}">
             ${prompts.map((p, i) => `
-                <div class="prompt-option ${i === 0 ? 'selected' : ''}" onclick"=selectPrompt('leq', ${unit.id}, ${i}, this)">
+                <div class="prompt-option ${i === 0 ? 'selected' : ''}" onclick="selectPrompt('leq', ${unit.id}, ${i}, this)">
                 <div class="prompt-label">Option ${i + 1}</div>
                 <p>${p}</p>
             `).join('')}
@@ -447,12 +447,13 @@ function renderUnitLEQ(unit) {
             <label>Your Essay Response</label>
             <textarea id="leq-response-${unit.id}" style="min-height: 320px;" placeholder="Write your full LEQ response here. Make sure to include you thesis, contextualization, evidence, and analysis all in one response (make sure to divide into paragraphs)..."></textarea>
         </div>
-        <button class="button primary" style="margin-top: 11px;" onclick=gradeEssay('leq', ${unit.id})">Get AI Feedback</button>
+        <button class="button primary" style="margin-top: 11px;" onclick="gradeEssay('leq', ${unit.id})">Get AI Feedback</button>
         <div class="ai-feedback" id="saq-feedback-${unit.id}">
             <div class="ai-feedback-head">AI Grader Feedback</div>
             <div id="saq-feedback-content-${unit.id}"></div>
         </div>
-        `;
+    </div>
+    `;
 }
 
 function renderUnitDBQ(unit) {
@@ -465,7 +466,7 @@ function renderUnitDBQ(unit) {
 
         <div class="saq-block">
             <div class="question-number">DBQ Prompt</div>
-            <p class="saq-prompt">${unit.dbq.prompt}></p>
+            <p class="saq-prompt">${unit.dbq.prompt}</p>
             <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 18px; font-style: italic;">${unit.dbq.note}</p>
             
         
@@ -489,7 +490,7 @@ function renderUnitDBQ(unit) {
 
 let selectedLEQPrompts = {};
 
-function selectedLEQPrompts(type, unitId, index, el) {
+function selectPrompts(type, unitId, index, el) {
     const picker = document.getElementById(`${type}-picker-${unitId}`);
     picker.querySelectorAll('.prompt option').forEach(o => o.classList.remove('selected'));
     el.classList.add('selected');
@@ -500,7 +501,7 @@ const GEMINI_API_KEY = 'AIzaSyCEvQwndJxiwSXQFmpRUGXeYBvnL5Z3jsg';
 const GEMINI_MODEL = 'gemini-flash-latest';
 
 async function callGemini(prompt) {
-    const url = 'https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}';
+    const url = "https://generativelanguage.googleapis.com/v1beta/models/$\{GEMINI_MODEL\}:generateContent?key=$\{GEMINI_API_KEY\}";
 
     const response = await fetch(url, {
         method: 'POST',
@@ -553,7 +554,7 @@ async function gradeEssay(type, unitId) {
     let feedbackId = '';
     let prompt = '';
 
-    const unit = UNITS.find(u => u.id === unitId);
+    const unit = Units.find(u => u.id === unitId);
 
     if (type === 'leq') {
         content = document.getElementById(`leq-response-${unitId}`).value;
