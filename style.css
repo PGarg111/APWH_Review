@@ -12,7 +12,7 @@
     --bg:#E0C9A6;
     --bg2:#141414;
     --bg3:#1c1c1c;
-    --border:#2a2a2a;
+    --border:#c0ac8d;
     --gold: #c9a84c;
     --gold-dim:#8a6f2e;
     --cream:#f0e6cc;
@@ -110,27 +110,33 @@ a:hover{
     margin-top: 32px;
 }
 
-.unit-grid {
-    background: #a19f9f10;
+
+.unit-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
     border-radius: 6px;
+    padding: 14px;
+    cursor: pointer;
     position: relative;
     overflow: hidden;
-    padding: 24px;
-    backdrop-filter: blur(15px);
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .unit-card::before {
+    padding-left: 2px;
     content: '';
     position: absolute;
     background: var(--gold);
     width: 3px;
+    top: 0;
+    left: 0;
     height: 100%;
     opacity: 0;
     transition: opacity var(--transition);
 }
 
 .unit-card:hover {
-    /* border-color: var(--gold-dim); */
+    border-color: var(--gold-dim);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px #d0b387;
 }
