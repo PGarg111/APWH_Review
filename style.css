@@ -60,7 +60,7 @@ a:hover{
     gap: 25px;
     padding: 0 15px;
     height: 60px;
-    margin-right: 10px;
+
 }
 
 .nav-button {
@@ -111,11 +111,12 @@ a:hover{
 }
 
 .unit-grid {
-    background: var(--bg2);
+    background: #a19f9f10;
     border-radius: 6px;
     position: relative;
     overflow: hidden;
     padding: 24px;
+    backdrop-filter: blur(15px);
 }
 
 .unit-card::before {
@@ -129,9 +130,9 @@ a:hover{
 }
 
 .unit-card:hover {
-    border-color: var(--gold-dim);
+    /* border-color: var(--gold-dim); */
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px black;
+    box-shadow: 0 8px 24px #d0b387;
 }
 
 .unit-card:hover::before {
@@ -139,23 +140,24 @@ a:hover{
 }
 
 .unit-number {
-    font-size: 4.2px;
+    font-size: 14px;
     color: var(--gold);
     text-transform: uppercase;
 }
 
 .unit-card h3 {
-    color: var(--cream);
-    font-size: 6.4px;
+    color: var(--text-dark);
+    font-size: 25px;
 }
 
 .unit-card p {
-    font-size: 10px;
+    font-size: 18px;
     color: var(--text-dim);
     line-height: 1.5;
 }
 
 .unit-period {
+    margin-top: 5px;
     display: inline-block;
     color: var(--gold-dim);
     border: 1px solid var(--gold-dim);
@@ -171,3 +173,4 @@ a:hover{
     padding-bottom: 16px;
     border-bottom: 1px solid var(--border);
 }
+
