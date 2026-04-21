@@ -299,9 +299,78 @@ function UnitDetails(unitId) {
         </div>
 
         <div class="content-panel active" id ="panel-${sub}-breakdown">
+            <div class="breakdown">${data.breakdown}</div>
+        </div>
+
+        <div class="content-panel" id="panel"-${sub}-breakdown">
             <div class="breakdown-prose">${data.breakdown}</div>
         </div>
-        `
-    })
+
+        <div class="content-panel" id="panel-${sub}-mcq">
+          ${data.mcqs.length ? data.mcqs.map((q, qi) => renderMCQ(q, `${sub}-${qi}`)).join('') : '<p style="color:var(--text-dim); font-style:italic;">No MCQs added yet for this subsection.</p>'}
+        </div>
+
+        <div class="content-panel" id="panel-${sub}-saq">
+          ${data.saqs.length ? data.saqs.map((s, si) => renderSAQ(s, `${sub}-${si}`)).join('') : '<p style="color:var(--text-dim); font-style:italic;">No SAQs added yet for this subsection.</p>'}
+        </div>
+
+        <div class="content-panel" id="panel-${sub}-videos">
+            <div class="video-grid">
+                ${data.videos.map (v =>`
+                    <div class="video">
+                        <div class="video-embed">
+                            <iframa src="https://www.youtube.com/embed/${v.id}" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>${v.title}</h4>
+                            <p>Heimler Videos</p>
+                        </div>
+                    </div>
+                    `
+                ).join('')}
+            </div>
+        </div>
+    </div>
+    `;
+    }).join('');
+
+    document.getElementById('unit-leq').innerHTML = renderUnitLEQ(unit);
+    document.getElementById('unit-dbq').innerHTML = renderUnitDBQ(unit);
 }
 
+function switchSub(sub, btn) {
+    document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('sub-content').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('sub-' + sub).classList.add('active');
+}
+
+function switchContentTab(sub, tab, btn) {
+    const parent = document.getElementById('sub-' + sub);
+    parent.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
+    parent.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(`panel-${sub}-${tab}`).classList.add('active');
+}
+
+function renderMCQ(q, id) {
+    const letters = ["A", "B", "C", "D"];
+    return `
+    <div class="question-block">
+        <div class="question-num">MCQ - Question ${id.toUpperCase()}</div>
+        <div class="question-text">${q.q}</div>
+        <div class="answer-options">
+            ${q.options.map((opt, i) => `
+                <button class="answer-button" onclick="checkAnswer(this, ${i}, ${q.correct}, '${id})" id="ans-${id}-${i}">
+                    <span class="answer-letter">${letters[i]}</span>
+                    <span>${opt}</span>
+                </button> 
+            `).join('')}
+        </div>
+        <div class="explanation" id="exp-${id}">
+            <strong>Explanation:</strong> ${q.explanation}
+        </div>
+
+    </div>
+    `;
+}
