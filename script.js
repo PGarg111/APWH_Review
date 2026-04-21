@@ -1,23 +1,25 @@
 const Units = [
-    {id: 1, title: "The Global Tapestry", period: "c. 1200 to c. 1450", 
-        desc: "Focuses on state-building technological advancements, and cultural developments around the world during the time period.", 
-        subs: ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "1.7"], 
+    {
+        id: 1, title: "The Global Tapestry", period: "c. 1200 to c. 1450",
+        desc: "Focuses on state-building technological advancements, and cultural developments around the world during the time period.",
+        subs: ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "1.7"],
         leq: {
-        prompt: "By the 14th century, Islam, Hinduism, and Confucianism each included movements within them that placed greater emphasis on either emotion or reason. Develop and argument that evaluates the extent to which two religious or ethical systems of thought were similar or different up through the 15th century.",
-        prompts: [
-            "By the 14th century, Islam, Hinduism, and Confucianism each included movements within them that placed greater emphasis on either emotion or reason. Develop and argument that evaluates the extent to which two religious or ethical systems of thought were similar or different up through the 15th century.",
-            "Because of its size, wealth, and cultural innovations, China had a significant influence on ite East Asia neighbors in the years 1200 to 1450-wether those neighbors were friendly or hostile. Develop an argument that evaluates the extent to which Chinese cultural traditions led to political or social change in other East Asian societies in that time period.",
-            "Abundant natural resources and the rise of powerful centralized governments affected Africans states between the 12th and the 15th centuries. Develop an argument that evaluates the extent to which change or continuity over time occurred in the economics and politics during that time period in one African state.",
-            "Abundant natural resources and the rise of powerful centralized governments affected American states between the 12th and the 15th centuries. Develop an argument that evaluates the extent to which change or continuity over time occurred in the economics and politics during that time period in one American state."
-        ]
+            prompt: "By the 14th century, Islam, Hinduism, and Confucianism each included movements within them that placed greater emphasis on either emotion or reason. Develop and argument that evaluates the extent to which two religious or ethical systems of thought were similar or different up through the 15th century.",
+            prompts: [
+                "By the 14th century, Islam, Hinduism, and Confucianism each included movements within them that placed greater emphasis on either emotion or reason. Develop and argument that evaluates the extent to which two religious or ethical systems of thought were similar or different up through the 15th century.",
+                "Because of its size, wealth, and cultural innovations, China had a significant influence on ite East Asia neighbors in the years 1200 to 1450-wether those neighbors were friendly or hostile. Develop an argument that evaluates the extent to which Chinese cultural traditions led to political or social change in other East Asian societies in that time period.",
+                "Abundant natural resources and the rise of powerful centralized governments affected Africans states between the 12th and the 15th centuries. Develop an argument that evaluates the extent to which change or continuity over time occurred in the economics and politics during that time period in one African state.",
+                "Abundant natural resources and the rise of powerful centralized governments affected American states between the 12th and the 15th centuries. Develop an argument that evaluates the extent to which change or continuity over time occurred in the economics and politics during that time period in one American state."
+            ]
         },
         dbq: {
             prompt: "Using the documents and your knowledge of world history, evaluate the extent to which contact among groups of people influenced cultural developments in sub-Saharan African during the time period c. 1200 to c. 1450. The documents have been edited for the purpose of this exercise. You are advised to spend 15 minutes planning and 45 minutes writing your answer.",
-            note:"assests/notes/unit1DBQ.pdf"
+            note: "assests/notes/unit1DBQ.pdf"
         }
     },
-    {id: 2, title: "Networks of Exchange", period: "c. 1200 to c. 1450", 
-        desc: "Focuses on the expansion of trade routes which connected Afro-Eurasia.", 
+    {
+        id: 2, title: "Networks of Exchange", period: "c. 1200 to c. 1450",
+        desc: "Focuses on the expansion of trade routes which connected Afro-Eurasia.",
         subs: ["2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7"],
         leq: {
             prompts: [
@@ -32,8 +34,9 @@ const Units = [
             note: "assests/notes/unit2DBQ.pdf"
         }
     },
-    {id: 3, title: "Land-Based Empires", period: "c. 1450 to c. 1750", 
-        desc: "Focuses on the expansion, administration, and legitimization of land-based gunpowder empires.", 
+    {
+        id: 3, title: "Land-Based Empires", period: "c. 1450 to c. 1750",
+        desc: "Focuses on the expansion, administration, and legitimization of land-based gunpowder empires.",
         subs: ["3.1", "3.2", "3.3", "3.4"],
         leq: {
             prompts: [
@@ -48,8 +51,9 @@ const Units = [
             note: "assests/notes/unit3DBQ.pdf"
         }
     },
-    {id: 4, title: "Transoceanic Interconnections", period: "c. 1450 to c. 1750", 
-        desc: "Focuses on the rise of European maritime empires, the linking of Eastern and Western hemispheres, and the resulting global exchange of goods, diseases, and people.", 
+    {
+        id: 4, title: "Transoceanic Interconnections", period: "c. 1450 to c. 1750",
+        desc: "Focuses on the rise of European maritime empires, the linking of Eastern and Western hemispheres, and the resulting global exchange of goods, diseases, and people.",
         subs: ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8"],
         leq: {
             prompts: [
@@ -64,8 +68,9 @@ const Units = [
             note: "assests/notes/unit4DBQ.pdf"
         }
     },
-    {id: 5, title: "Revolutions", period: "c. 1750 to c. 1900", 
-        desc: "Explores the political, intellectual, and industrial revolutions that reshaped the world from 1750 to 1900.", 
+    {
+        id: 5, title: "Revolutions", period: "c. 1750 to c. 1900",
+        desc: "Explores the political, intellectual, and industrial revolutions that reshaped the world from 1750 to 1900.",
         subs: ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10"],
         leq: {
             prompts: [
@@ -80,8 +85,9 @@ const Units = [
             note: "assests/notes/unit5DBQ.pdf"
         }
     },
-    {id: 6, title: "Consequences of Industrialization", period: "c. 1750 to c. 1900", 
-        desc: "Focuses on the consequences of industrialization, specifically how industrial nations used their economic power to establish global empires.", 
+    {
+        id: 6, title: "Consequences of Industrialization", period: "c. 1750 to c. 1900",
+        desc: "Focuses on the consequences of industrialization, specifically how industrial nations used their economic power to establish global empires.",
         subs: ["6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8"],
         leq: {
             prompts: [
@@ -96,8 +102,9 @@ const Units = [
             note: "assests/notes/unit6DBQ.pdf"
         }
     },
-    {id: 7, title: "Global Conflicts After 1900", period: "c. 1900 - Present", 
-        desc: "Focuses on global conflicts, covering the causes, conduct, and consequences of World War I and II, spanning 1900 and 1945.", 
+    {
+        id: 7, title: "Global Conflicts After 1900", period: "c. 1900 - Present",
+        desc: "Focuses on global conflicts, covering the causes, conduct, and consequences of World War I and II, spanning 1900 and 1945.",
         subs: ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9"],
         leq: {
             prompts: [
@@ -112,8 +119,9 @@ const Units = [
             note: "assests/notes/unit7DBQ.pdf"
         }
     },
-    {id: 8, title: "Cold War and Decolonization", period: "c. 1900 - Present", 
-        desc: "Focuses on Cold War ideological conflict between the U.S. and USSR, and simultaneous wave of decolonization.", 
+    {
+        id: 8, title: "Cold War and Decolonization", period: "c. 1900 - Present",
+        desc: "Focuses on Cold War ideological conflict between the U.S. and USSR, and simultaneous wave of decolonization.",
         subs: ["8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "8.7", "8.8"],
         leq: {
             prompts: [
@@ -128,8 +136,9 @@ const Units = [
             note: "assests/notes/unit8DBQ.pdf"
         }
     },
-    {id: 9, title: "Globalization after 1900", period: "c. 1900 - Present", 
-        desc: "Focuses on globalization, examining how technology, communication, and economic shifts created an increasingly interconnected world.", 
+    {
+        id: 9, title: "Globalization after 1900", period: "c. 1900 - Present",
+        desc: "Focuses on globalization, examining how technology, communication, and economic shifts created an increasingly interconnected world.",
         subs: ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9"],
         leq: {
             prompts: [
@@ -149,7 +158,7 @@ const Units = [
 const subUnits = {
     "1.1": {
         label: "Developments in East Asia",
-        breakdown:`
+        breakdown: `
         <h4>Overview</h4>
         <h5>Revival of Large Empires</h5>
         <ul>
@@ -180,8 +189,8 @@ const subUnits = {
         </div>
         `,
         videos: [
-            {title: "Developments in EAST ASIA [AP World Review Unit 1 Topic 1]", id: "HfIWZhXt7fY&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=1"},
-            {title: "Developments in DAR-AL-ISLAM [AP World Review—Unit 1 Topic 2]", id: "O9P1TaBnhg8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=2"}
+            { title: "Developments in EAST ASIA [AP World Review Unit 1 Topic 1]", id: "HfIWZhXt7fY&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=1" },
+            { title: "Developments in DAR-AL-ISLAM [AP World Review—Unit 1 Topic 2]", id: "O9P1TaBnhg8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=2" }
         ],
         mcqs: [
             {
@@ -223,9 +232,9 @@ const subUnits = {
                 prompt: "Use the passage below to answer all parts of the question that follows.",
                 source: '"The Moral Nature Being uptight and modest, reserved and quiet, correct and dignified , sincere and honest: these constitute the moral nature of a woman. Being filial and respectful, humane and perspicacious [shrewd, wise], loving and warm. meek and gentle: these represent the complete development of the moral nature. The moral nature of being.innate in our endowment, it becomes transformed and fulfilled through practice. It is not something that comes from the outside but is actually rooted in our very selves. Cultivation of the Self .. . Now if the self is not cultivated, then vi1tue will not be established. If one\'s virtue is not established, rarely can one be an influence for good in the family - bow much less in. the wider world. Therefore, the wife is one who follows her husband. The way of husband and wife is the principle of the strong and the weak. In the past, the reason why enlightened monarchs were careful about establishing marriage was that they valued the way of procreation and perpetuation. [The rise and faU of the state is intimately linked to the prosperity or decline of the family.] " Empress Xu, Instructions for the Inner Quarters. c. J 420',
                 parts: [
-                    {label: "Part A", prompt: "Describe ONE way in which Xu's argument was influenced by long-standing Asian cultural traditions."},
-                    {label: "Part B", prompt: "Explain ONE example of Xu's recommendations to Chinese women that cross boundaries of gender in the period between c. 1200 and c. 1450."},
-                    {label: "Part C", prompt: "Explain ONE historical situation from c. 1200- c. 1450 in which states in Asia attempted to limit Chinese political power or cultural influence."}
+                    { label: "Part A", prompt: "Describe ONE way in which Xu's argument was influenced by long-standing Asian cultural traditions." },
+                    { label: "Part B", prompt: "Explain ONE example of Xu's recommendations to Chinese women that cross boundaries of gender in the period between c. 1200 and c. 1450." },
+                    { label: "Part C", prompt: "Explain ONE historical situation from c. 1200- c. 1450 in which states in Asia attempted to limit Chinese political power or cultural influence." }
                 ]
             }
         ]
@@ -257,8 +266,8 @@ function showPage(pageId, unitId) {
 
 function renderUnitCards(containerId, limit) {
     const container = document.getElementById(containerId);
-    const units = limit ? Units.slice(0, limit): Units;
-    container.innerHTML = units.map(u => 
+    const units = limit ? Units.slice(0, limit) : Units;
+    container.innerHTML = units.map(u =>
         `<div class="unit-card" onclick="showPage('unit-detail', ${u.id})">
             <div class="unit-number">Unit ${u.id}</div>
             <h3>${u.title}</h3>
@@ -276,20 +285,20 @@ function UnitDetails(unitId) {
     document.getElementById('unit-detail-tag').textContent = unit.period;
 
     const tabsEl = document.getElementById('subsection-tabs');
-    tabsEl.innerHTML = unit.subs.map((sub, i) => 
-    `<button class="sub-tab ${i === 0 ? 'active': ''}" onclick="switchSub('${sub}', this)">${sub}</button`
+    tabsEl.innerHTML = unit.subs.map((sub, i) =>
+        `<button class="sub-tab ${i === 0 ? 'active' : ''}" onclick="switchSub('${sub}', this)">${sub}</button`
     ).join('');
 
     const panelsEl = document.getElementById('subsection-panels');
     panelsEl.ATTRIBUTE_NODE.innerHTML = unit.subs.map((sub, i) => {
         const data = subUnits[sub];
-        if (!data) return`
-        <div class="subsection-content ${i === 0 ? 'active': ''}" id="sub-${sub}">
+        if (!data) return `
+        <div class="subsection-content ${i === 0 ? 'active' : ''}" id="sub-${sub}">
             <p style="color: var(--text-dim); font-style: italic;">Content for ${sub} coming soon - adding subsections</p>
         </div>
         `;
 
-        return`
+        return `
         <div class="subsection-content ${i === 0 ? 'active' : ''}" id="sub-${sub}">
         <div class="content-tabs">
           <button class="content-tab active" onclick="switchContentTab('${sub}', 'breakdown', this)">Breakdown</button>
@@ -316,7 +325,7 @@ function UnitDetails(unitId) {
 
         <div class="content-panel" id="panel-${sub}-videos">
             <div class="video-grid">
-                ${data.videos.map (v =>`
+                ${data.videos.map(v => `
                     <div class="video">
                         <div class="video-embed">
                             <iframa src="https://www.youtube.com/embed/${v.id}" allowfullscreen loading="lazy"></iframe>
@@ -327,7 +336,7 @@ function UnitDetails(unitId) {
                         </div>
                     </div>
                     `
-                ).join('')}
+        ).join('')}
             </div>
         </div>
     </div>
@@ -374,3 +383,215 @@ function renderMCQ(q, id) {
     </div>
     `;
 }
+
+function checkAnswer(bt, chose, correct, id) {
+    const parent = btn.closest('.question-block');
+    parent.querySelectorAll('.answer-button').forEach(b => b.disabled = true);
+
+    if (chosen === correct) {
+        btn.classList.add('correct');
+    }
+    else {
+        btn.classList.add('incorrect');
+        parent.querySelectorAll('.answer-button')[correct].classList.add('correct');
+    }
+
+    document.getElementById('exp-' + id).classList.add('visible');
+}
+
+function renderSAQ(s, id) {
+    return `
+    <div class="saq-block">
+        <p class="saq-prompt">${s.prompt}</p>
+        ${s.source ? `<blockquote style="border-left: 3px solid var(--gold-dim); padding-left: 16px; margin: 0 0 20px; font-style: italic; color: var(--text-dim);
+            font-size: 14px;">${s.source}</blockquote>` : ''}
+        <div class=saq-parts">
+            ${s.parts.map((p, pi) => `
+                <div class="saq-part">
+                    <label>${p.label} - ${p.prompt}</label>
+                    <textarea id="saq-${id}-${pi}" placeholder="Write your resonse here..."></textarea>
+                </div>
+                `).join('')}
+        </div>
+        <button class="button primary" onclick"gradeSAQ('${id}', ${s.parts.length})">Get AI Feedback</button>
+        <div class="ai-feedback" id="saq-feedback-${id}">
+            <div class="ai-feedback-head">AI Grader Feedback</div>
+            <div id="saq-feedback-content-${id}"></div>
+        </div>
+    </div>
+    `;
+}
+
+function renderUnitLEQ(unit) {
+    const prompts = unit.leq.prompts;
+    return `
+    <div class="unit-essay-section">
+        <div class="section-head" style="margin-top: 35px;>
+            <h2>Unit ${unit.id} LEQ</h2>
+            <span class="tag">Long Essay Question. Choose one prompt from below</span>
+        </div>
+        
+        <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 18px;">
+            On the real exam you choose <strong style="color: var(--cream);">one</strong> of three prompts. Select ta prompt below, then write your full essay response. Don't use any outside help. To really test yourself, only use your knowledge about the topic just like how you would on the AP exam.
+        </p>
+        
+        <div class="essay-picker" id="led-picker-${unit.id}">
+            ${prompts.map((p, i) => `
+                <div class="prompt-option ${i === 0 ? 'selected' : ''}" onclick"=selectPrompt('leq', ${unit.id}, ${i}, this)">
+                <div class="prompt-label">Option ${i + 1}</div>
+                <p>${p}</p>
+            `).join('')}
+        </div>
+        
+        <div class="saq-part" style="margin-top: 38px;">
+            <label>Your Essay Response</label>
+            <textarea id="leq-response-${unit.id}" style="min-height: 320px;" placeholder="Write your full LEQ response here. Make sure to include you thesis, contextualization, evidence, and analysis all in one response (make sure to divide into paragraphs)..."></textarea>
+        </div>
+        <button class="button primary" style="margin-top: 11px;" onclick=gradeEssay('leq', ${unit.id})">Get AI Feedback</button>
+        <div class="ai-feedback" id="saq-feedback-${unit.id}">
+            <div class="ai-feedback-head">AI Grader Feedback</div>
+            <div id="saq-feedback-content-${unit.id}"></div>
+        </div>
+        `;
+}
+
+function renderUnitDBQ(unit) {
+    return `
+    <div class="unit-essay-section">
+        <div class="section-head" style="margin-top: 35px;>
+            <h2>Unit ${unit.id} LEQ</h2>
+            <span class="tag">Document Based Question. Choose one prompt from below</span>
+        </div>
+
+        <div class="saq-block">
+            <div class="question-number">DBQ Prompt</div>
+            <p class="saq-prompt">${unit.dbq.prompt}></p>
+            <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 18px; font-style: italic;">${unit.dbq.note}</p>
+            
+        
+            <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 18px;">
+                On the real exam you choose <strong style="color: var(--cream);">one</strong> of three prompts. Select ta prompt below, then write your full essay response. Don't use any outside help. To really test yourself, only use your knowledge about the topic just like how you would on the AP exam.
+            </p>
+        
+            <div class="saq-part">
+                <label>Your Essay Response</label>
+                <textarea id="dbq-response-${unit.id}" style="min-height: 320px;" placeholder="Write your full DBQ response here. Make sure to include your thesis, contextualization, document analysis, sourcing, outside evidence, and complexity all in one response (don't use any other evidence than that from your brain and the documents)..."></textarea>
+            </div>
+            <button class="button primary" style="margin-top: 11px;" onclick=gradeEssay('dbq', ${unit.id})">Get AI Feedback</button>
+            <div class="ai-feedback" id="dbq-feedback-${unit.id}">
+                <div class="ai-feedback-head">AI Grader Feedback</div>
+                <div id="dbq-feedback-content-${unit.id}"></div>
+            </div>
+        </div>
+    </div>
+    `;
+}
+
+let selectedLEQPrompts = {};
+
+function selectedLEQPrompts(type, unitId, index, el) {
+    const picker = document.getElementById(`${type}-picker-${unitId}`);
+    picker.querySelectorAll('.prompt option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedLEQPrompts[unitId] = index;
+}
+
+const GEMINI_API_KEY = 'AIzaSyCEvQwndJxiwSXQFmpRUGXeYBvnL5Z3jsg';
+const GEMINI_MODEL = 'gemini-flash-latest';
+
+async function callGemini(prompt) {
+    const url = 'https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}';
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            contents: [{
+                parts: [{ text: prompt }]
+            }]
+        })
+    });
+
+    if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error?.message || 'API Error');
+    }
+
+    const data = await response.json();
+
+    return data.candidates[0].content.parts[0].text;
+}
+
+async function gradeSAQ(id, numParts) {
+    const responses = [];
+    for (let i = 0; i < numParts; i++) {
+        responses.push(document.getElementById(`saq-${id}-${i}`)?.value || '');
+    }
+
+    const feedbackEl = document.getElementById(`saq-feedback-${id}`);
+    const contentEl = document.getElementById(`saq-feedback-content-${id}`);
+    feedbackEl.classList.add('visible');
+    contentEl.innerHTML = '<span class="loading-dots">Grading</span>';
+
+    const prompt = `You are an AP World History SAQ grader. Grade the following student SAQ responses using the 2026 College Board rubric. Each part is worth 1 point (max 3 points total). For each part, state clearly whether they earned the point (✓ Earned / ✗ Not Earned) and explain specifically why, referencing the historical accuracy and specificity of their answer. Be encouraging but honest.
+
+Student responses:
+${responses.map((r, i) => `Part ${['A', 'B', 'C'][i]}: ${r || '[No response]'}`).join('\n')}`;
+
+    try {
+        const result = await callGemini(prompt);
+        contentEl.innerHTML = result.replace(/\n/g, '<br>');
+    } catch (e) {
+        contentEl.innerHTML = '<em style="color:var(--red);">Could not connect to AI grader. Check your API key.</em>';
+    }
+}
+
+async function gradeEssay(type, unitId) {
+    let content = '';
+    let feedbackId = '';
+    let prompt = '';
+
+    const unit = UNITS.find(u => u.id === unitId);
+
+    if (type === 'leq') {
+        content = document.getElementById(`leq-response-${unitId}`).value;
+        feedbackId = `leq-feedback-${unitId}`;
+        const promptIndex = selectedLEQPrompts[unitId] || 0;
+        prompt = unit.leq.prompts[promptIndex];
+    } else {
+        content = document.getElementById(`dbq-response-${unitId}`).value;
+        feedbackId = `dbq-feedback-${unitId}`;
+        prompt = unit.dbq.prompt;
+    }
+
+    const feedbackEl = document.getElementById(feedbackId);
+    const contentEl = document.getElementById(`${feedbackId}-content`);
+    feedbackEl.classList.add('visible');
+    contentEl.innerHTML = '<span class="loading-dots">Grading</span>';
+
+    const rubric = type === 'leq'
+        ? 'LEQ Rubric (6 points): Thesis/Claim (1pt), Contextualization (1pt), Evidence - Specific Examples (2pt), Analysis & Reasoning (1pt), Complexity (1pt).'
+        : 'DBQ Rubric (7 points): Thesis/Claim (1pt), Contextualization (1pt), Evidence - Document Content (2pt), Evidence - Outside Evidence (1pt), Analysis & Reasoning - Sourcing (1pt), Complexity (1pt).';
+
+    const aiPrompt = `You are an AP World History ${type.toUpperCase()} grader. The prompt was: "${prompt}"
+
+Grade the following student response using the official 2026 College Board rubric. For each rubric point, state clearly whether they earned it (✓ or ✗) and explain why with specific reference to what they wrote. Give actionable feedback on how they can improve. End with a total score out of ${type === 'leq' ? 6 : 7} and a brief overall comment.
+
+${rubric}
+
+Student response:
+${content || '[No response provided]'}`;
+
+    try {
+        const result = await callGemini(aiPrompt);
+        contentEl.innerHTML = result.replace(/\n/g, '<br>');
+    } catch (e) {
+        contentEl.innerHTML = '<em style="color:var(--red);">Could not connect to AI grader. Check your API key.</em>';
+    }
+}
+
+renderUnitCards('home-units');
+renderUnitCards('all-units');
+showPage('home');
