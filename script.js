@@ -160,9 +160,22 @@ const subUnits = {
         label: "Developments in East Asia",
         breakdown: `
         <h4>Overview</h4>
-        <h5>Revival of Large Empires</h5>
+        <h5>Song Dynasty</h5>
+        <p>The Song Dynasty (960-1279) was a period of relative stability and bureaucratic sophistication. Unlike previous empire that relied only on military power, the Song expanded the Imperial Bureaucracy. 
+        </p>
         <ul>
-            <li>Song Dynasty most innovative in Afro-Eurasia and Americas - latest in series of states ruled a unified, prosperous China</li>
+            <li>Meritocracy: Positions were awarded based on performance rather than birth</li>
+            <li>Civil Service Exam: To join the government, men had to pass exams based on Confucianism. This created the scholar gentry class<li>
+            <li>The bureaucracy eventually became so large and expensive that it drained the empire's wealth, contributing to its decline<li>
+        </ul>
+
+        <h5>Economic Revolution</h5>
+        <p>Song China was the most prosperous and highly populated region in the world, largely due to a series of agricultural and technological breakthroughs.</p>
+
+        <p><strong>Agriculture</strong></p>
+        <ul>
+            <li>Champa Rice: fast-ripening, drought resistant strain of rice from Champa Kingdom (Vietnam), allowed 2 harvests per year. Led to a massive population explosion</li>
+            <li>The Grand Canal: An internal waterway system that connected the South to the North, boosted internal trade</li>
         </ul>
         <h4>Key Terms</h4>
         <div class="key-terms">
@@ -238,7 +251,150 @@ const subUnits = {
                 ]
             }
         ]
+    },
+    "3.1": {
+        label: "European, East Asian, and Gunpowder Empires Expan",
+        breakdown: `
+        <h4>Overview</h4>
+        <h5>Gunpowder and Expansion</h5>
+        <p>Between 1450 and 1750, several powerful empires grew by leveraging gunpowder technology. These "Gunpowder Empires" typically featured:
+        </p>
+        <ul>
+            <li>Centralized governments that weakened local nobles</li>
+            <li>Large-scale military conquests<li>
+            <li>Diverse populations across sprawling landmasses<li>
+        </ul>
+
+        <h5>Islamic Gunpowder Empires</h5>
+        <p>The 3 most prominent empires in this category were the Ottoman, Safavid, and Mughal Empires. They shared Turkic roots but were often rivals.</p>
+        <p>Ottoman Empire</p>
+        <ul>
+            <li>Key Leaders: Mehmed II, Suleiman I</li>
+            <li>Primary Religion: Sunni Islam</li>
+            <li>Notable Achievements: Conquered Constantinople, used Devshirme system (Janissaires)</li>
+        </ul>
+
+        <p>Safavid Empire</p>
+        <ul>
+            <li>Key Leaders: Shah Abbas I, Ismail I</li>
+            <li>Primary Religion: Shia Islam</li>
+            <li>Notable Achievements: Build a power base in Persia, was constantly fighting with Ottomans over trade and religion</li>
+        </ul>
+
+        <p>Mughal Empire</p>
+        <ul>
+            <li>Key Leaders: Akbar the Great, Aurangzeb, Shah Jahan</li>
+            <li>Primary Religion: Islam, but Hindu majority</li>
+            <li>Notable Achievements: Centralized India, empire flourished under Akbar (had a policy of religious tolerance) and declined under Aurangzeb</li>
+        </ul>
+
+        <h5>East Asia: From Ming to Qing</h5>
+        <p>The Ming Dynasty in China was eventually overthrown by the Manchu people from the north who established the Qing Dynasty.</p>
+
+        <p><strong>The Differences</strong></p>
+        <ul>
+            <li>The Ming focused on restoring Chinese tradition (Confucianism) and expanding the Great Wall to protect China from invaders</li>
+            <li>The Qing maintained the bureaucracy and Civil Service Exams but forced the Manchu culture on the Chinese (example: the queue hairstyle). Under the rule of emperors like Emperor Kangxi, China reached its greatest size.</li>
+        </ul>
+
+        <h5>The Rise of the Russian Empire</h5>
+        <p>Russia emerged from Mongol control and transformed into a massive land-based empire.</p>
+        <ul>
+            <li>Ivan The Terrible (Ivan IV) expanded Russian territory eastward into Serbia with the help of gunpowder and Cossack warriors. To be able to centralize authority, Ivan IV weakened the power of the Boyars.</li>
+            <li>Russia's expansion was driven by the fur trade and a desure for warm-water ports.</li>
+        </ul>
+
+        <h5>European Monarchies: Centralizing Power</h5>
+        <p>While the east was building massive land empires, European monarchs were consolidating power, moving away from the decentralized feudalism.</p>
+        <ul>
+            <li>England developed a Constitutional Monarchy after the English Civil War and the Glorious Revolution, shifted power toward Parliament.</li>
+            <li>France became a model for Absolute Monarchy under Louis XIV, also know as The Sun King. He used the Palace of Versailles to keep his nobles close (this way the nobles has less power).</li>
+        </ul>
+
+        <h5>Reason for Decline</h5>
+        <p>Most of these empires fell due to similar reasons. </p>
+        <ul>
+            <li>Maintaining the borders and advanced weaponry was a massive financial drain</li>
+            <li>Weak or "sheltered" heirs often led to political instability</li>
+            <li>Internal and external conflict weakened state unity</li>
+        </ul>
+
+        <h4>Key Terms</h4>
+        <div class="key-terms">
+            <span class="key-term">Ming Dynasty</span>
+            <span class="key-term">Manchu</span>
+            <span class="key-term">Qing Dynasty</span>
+            <span class="key-term">Kangxi</span>
+            <span class="key-term">Emperor Qianlong</span>
+            <span class="key-term">Gutenberg Printing Press - invented in Europe, led to the increase in literacy</span>
+            <span class="key-term">Gunpowder Empires - large multiethnic states in Southwest, Central, and South Asia that relied on firearms to conquer and control territories</span>
+            <span class="key-term">Ottoman Empire</span>
+            <span class="key-term">shah - king or emperor</span>
+            <span class="key-term">Safavid Empire</span>
+            <span class="key-term">Mughal Empire</span>
+            <span class="key-term">ghazi idea - a model for warrior life that blended the cooperative values of nomadic culture with the willingness to serve as a holy fighter for Islam</span>
+            <span class="key-term">castes - social groupings designated at birth, using in the Mughal Empire (and currently in India)</span>
+            <span class="key-term">Ivan IV (Russia)</span>
+            <span class="key-term">Tamerlane - led army into ruthless conquests in Persia and India, ghazi ideal fit Tamerlane</span>
+            <span class="key-term">Suleiman I (Ottoman Empire)</span>
+            <span class="key-term">Ismail (Safavid Empire)</span>
+            <span class="key-term">Shah Abbas I (Safavid Empire)</span>
+            <span class="key-term">Akbar (Mughal Empire)</span>
+        </div>
+        `,
+        videos: [
+            { title: "Developments in EAST ASIA [AP World Review Unit 1 Topic 1]", id: "HfIWZhXt7fY&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=1" },
+            { title: "Developments in DAR-AL-ISLAM [AP World Review—Unit 1 Topic 2]", id: "O9P1TaBnhg8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=2" }
+        ],
+        mcqs: [
+            {
+                question: "Questions 1-3 refer to the passage. [Hangzhou , China, has] ten principal markets .... [They] are all squares of half a mile to the side, and along their front passes the main street, which is 40 paces in width, and runs straight from end to end of the city, crossing many bridges of easy and commodious [convenient] approach .. . . So also parallel to this great street, but at the back of the market places, there runs a very large canal, on the bank of which towards the squares are built great houses of stone , in which the merchants from India and other foreign parts store their wares, to be handy for the markets. In each of the squares is held a market three days in the week, frequented by 40,000 or 50,000 persons.  - Marco Polo. The Travels of Marco Polo, c. L300. Based on the passage, which of the statements concerning the trading city of Hangzhou is most accurate?",
+                options: [
+                    "Foreigners were not welcome in Chinese trading cities, because they were considered barbarians and had nothing of value to trade.",
+                    "Many of the people coming to trade in cities in China were Europeans traveling along the Silk Roads.",
+                    "Hangzhou was a vital trading city because it had foreign merchants and was also accessible by the Grand Canal for internal trade.",
+                    "Chinese imperial governments limited the number of markets in Hangzhou to just a few centrally-located areas of the city. "
+                ],
+                correct: 2,
+                explanation: "The text explicitly states, '...in which the merchants from India and other foreign parts store their wares.' This confirms that the city was a hub for international commerce. The text mentions that 'there runs a very large canal.' In the historical context of Hangzhou, this refers to the Grand Canal, which was crucial for internal trade and connecting the city to the rest of the empire. Status as a Trading City: The description of 'ten principal markets,' the massive infrastructure (wide streets and bridges), and the high volume of people (40,000 to 50,000) all point to Hangzhou being a bustling, vital trading hub."
+            },
+            {
+                question: "What development, which began before the passage above written, allowed Europeans to obtain the products of East Asia?",
+                options: [
+                    "Chinese dynasties, such as the Tang and the Song, grew stronger, so long-distance trade could be conducted with less risk.",
+                    "New maritime technology allowed for ocean-going ships to establish trade routes from Asia to Europe via Souther Africa",
+                    "The Tang Dynasty expanded into the Middle East, so the trade routes between Europe and Africa were under one ruler.",
+                    "With the defeat of the Islamic caliphates, Europeans were able to establish direct contact with the Tang and the Song dynasties. "
+                ],
+                correct: 0,
+                explanation: "During the Tang (618–907) and Song (960–1279) dynasties, China was under strong, centralized rule. This political stability allowed the government to police trade routes, eliminate banditry, and maintain infrastructure—all of which made long-distance commerce safer. When routes are safe, merchants are more willing to invest in long-distance travel. These dynasties created an environment where foreign merchants (often Arab, Persian, or Central Asian) could safely bring goods from China to trade hubs, where they were then transported further west toward Europe. This 'security umbrella' was a prerequisite for the luxury goods trade to flourish before the 14th century."
+            },
+            {
+                question: "What products would Indians and other non-Chinese merchants be most likely to purchase in a market such as the one described in the passage?",
+                options: [
+                    "silk, porcelain, and tea",
+                    "pepper, nutmeg, and cinnamon",
+                    "cows, pigs, and oxen",
+                    "rugs, parchment, and horses "
+                ],
+                correct: 0,
+                explanation: "During the Song and Yuan dynasties, China was world-renowned for these three specific luxury goods. They were high-value, relatively lightweight, and in immense demand across the rest of the world, including India, the Middle East, and Europe. Foreign merchants traveled to major Chinese trading hubs like Hangzhou specifically to acquire these rare, high-quality items to sell back in their home regions for a significant profit."
+            }
+        ],
+        saqs: [
+            {
+                prompt: "Use the passage below to answer all parts of the question that follows.",
+                source: '"The Moral Nature Being uptight and modest, reserved and quiet, correct and dignified , sincere and honest: these constitute the moral nature of a woman. Being filial and respectful, humane and perspicacious [shrewd, wise], loving and warm. meek and gentle: these represent the complete development of the moral nature. The moral nature of being.innate in our endowment, it becomes transformed and fulfilled through practice. It is not something that comes from the outside but is actually rooted in our very selves. Cultivation of the Self .. . Now if the self is not cultivated, then vi1tue will not be established. If one\'s virtue is not established, rarely can one be an influence for good in the family - bow much less in. the wider world. Therefore, the wife is one who follows her husband. The way of husband and wife is the principle of the strong and the weak. In the past, the reason why enlightened monarchs were careful about establishing marriage was that they valued the way of procreation and perpetuation. [The rise and faU of the state is intimately linked to the prosperity or decline of the family.] " Empress Xu, Instructions for the Inner Quarters. c. J 420',
+                parts: [
+                    { label: "Part A", prompt: "Describe ONE way in which Xu's argument was influenced by long-standing Asian cultural traditions." },
+                    { label: "Part B", prompt: "Explain ONE example of Xu's recommendations to Chinese women that cross boundaries of gender in the period between c. 1200 and c. 1450." },
+                    { label: "Part C", prompt: "Explain ONE historical situation from c. 1200- c. 1450 in which states in Asia attempted to limit Chinese political power or cultural influence." }
+                ]
+            }
+        ]
     }
+    
+    
 }
 
 
@@ -384,7 +540,7 @@ function renderMCQ(q, id) {
     `;
 }
 
-function checkAnswer(bt, chose, correct, id) {
+function checkAnswer(btn, chose, correct, id) {
     const parent = btn.closest('.question-block');
     parent.querySelectorAll('.answer-button').forEach(b => b.disabled = true);
 
@@ -497,7 +653,7 @@ function selectPrompts(type, unitId, index, el) {
     selectedLEQPrompts[unitId] = index;
 }
 
-const GEMINI_API_KEY = 'AIzaSyCEvQwndJxiwSXQFmpRUGXeYBvnL5Z3jsg';
+const GEMINI_API_KEY = 'AIzaSyBdoIOmMbj_Dew-o5Ep9L_4IEMomZQX_C8';
 const GEMINI_MODEL = 'gemini-flash-latest';
 
 async function callGemini(prompt) {
