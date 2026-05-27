@@ -5,8 +5,8 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    background: var(--bg);
-    color: var(--text-dark);
+    background: #E0C9A6;
+    color: black;
     min-height: 100vh;
     line-height: 1.7;
     --bg:#E0C9A6;
@@ -53,14 +53,23 @@ a:hover{
     position: sticky;
     background: var(--bg2);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: right;
     gap: 25px;
     padding: 0 15px;
     height: 60px;
+    width: 30%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: width 0.8s ease-in-out;
 
+}
+
+.nav:hover {
+    width: 100%;
+    box-shadow: 0 5px 10px var(--bg2);
+    transform: scale(1);
 }
 
 .nav-button {
@@ -72,10 +81,11 @@ a:hover{
     padding: 10px 10px 10px 10px;
     cursor: pointer;
     transition: color var(--transition), background var(--transition);
+    border-radius: 10px;
 }
 
 .nav-button:hover, .nav-button.active {
-    color: var(--gold);
+    color: var(--bg2);
     background: var(--gold-dim);
 }
 
@@ -179,4 +189,22 @@ a:hover{
     padding-bottom: 16px;
     border-bottom: 1px solid var(--border);
 }
+
+.section-header h2 {
+    font-size: 22px;
+}
+
+.question-block {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.question-num {
+    font-size: 15px;
+    color: var(--gold-dim);
+    margin-bottom: 10px;
+}
+
 
