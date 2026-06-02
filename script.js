@@ -446,7 +446,7 @@ function UnitDetails(unitId) {
     ).join('');
 
     const panelsEl = document.getElementById('subsection-panels');
-    panelsEl.ATTRIBUTE_NODE.innerHTML = unit.subs.map((sub, i) => {
+    panelsEl.innerHTML = unit.subs.map((sub, i) => {
         const data = subUnits[sub];
         if (!data) return `
         <div class="subsection-content ${i === 0 ? 'active' : ''}" id="sub-${sub}">
