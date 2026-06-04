@@ -187,10 +187,12 @@ a:hover{
 }
 
 .question-block {
-    background: var(--bg2);
+    background: none;
     border: 1px solid var(--border);
     padding: 15px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 .question-num {
@@ -204,6 +206,10 @@ a:hover{
     color: var(--bg2);
     margin-bottom: 20px;
     line-height: 1.6;
+    font-family: "Vend Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .answer-options {
@@ -216,15 +222,22 @@ a:hover{
     display: flex;
     align-items: flex-start;
     gap: 14px;
-    background: var(--bg3);
+    background: var(--bg);
     width: 100%;
     color: var(--bg2);
+    border-radius: 10px;
+    padding: 7px 7px;
+    border: 2px solid var(--bg2);
+    font-family: "Vend Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .answer-button:hover:not(:disabled) {
-    border-color: var(--gold-dim);
+    border: 2px solid var(--gold-dim);
     color: var(--cream);
-    background: black;
+    background: var(--gold);
 }
 
 .answer-button:disabled {
@@ -232,14 +245,14 @@ a:hover{
 }
 
 .answer-button.correct {
-    border-color: var(--green);
-    background: black;
+    border-color: rgba(3, 120, 3, 0.823);
+    background: var(--green);
     color: var(--cream);
 }
 
 .answer-button.incorrect {
-    border-color: var(--red);
-    background: black;
+    border-color: rgba(143, 0, 0, 0.513);
+    background: var(--red);
     color: var(--cream);
 }
 
@@ -250,17 +263,10 @@ a:hover{
     margin-top: 1px;
 }
 
-.answer-button.correct .answer-letter {
-    color: var(--green);
-}
-
-.answer-button.incorrect .answer-letter {
-    color: var(--red);
-}
-
 .explanation {
+    margin-top: 10px;
     padding: 15px 10px;
-    background: black;
+    background: none;
     color: var(--bg2);
     display: none;
 }
@@ -270,15 +276,17 @@ a:hover{
 }
 
 .explanation strong {
-    color: var(--cream);
+    color: var(--bg3);
     font-weight: 600;
 }
 
 .saq-block {
-    background: var(--text-dim);
+    background: none;
     border: 1px solid var(--border);
     border-radius: 10px;
     margin-bottom: 7px;
+    padding: 15px 15px;
+    margin-top: 10px;
 }
 
 .saq-prompt {
@@ -287,12 +295,64 @@ a:hover{
     font-size: 14px;
 }
 
+.saq-parts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.saq-parts label {
+    display: block;
+    color: var(--bg2);
+}
+
+.saq-parts textarea {
+    width: 100%;
+    background: var(--cream);
+    padding: 5px 5px;
+    resize: vertical;
+    border-radius: 10px;
+    min-height: 90px;
+}
+
+.saq-parts textarea:focus {
+    outline: none;
+    border-color: var(--gold-dim);
+}
+
+.ai-feedback {
+    margin-top: 10px;
+    background: none;
+    border-radius: 10px;
+    display: none;
+}
+
+.ai-feedback.visible {
+    display: block;
+}
 
 
 .subsection-tabs {
     display:flex;
     flex-wrap: wrap;
     margin-bottom: 16px;
+}
+
+.loading-dots::after {
+    content: '...';
+    animation: dots 1.2s infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '.';
+    }
+    40% {
+        content: '..';
+    }
+    60%, 100% {
+        content: '...';
+    }
 }
 
 .sub-tab {
@@ -317,11 +377,11 @@ a:hover{
     background: var(--gold-dim);
 }
 
-.sub-content {
+.subsection-content {
     display: none;
 }
 
-.sub-content.active {
+.subsection-content.active {
     display: block;
 }
 
@@ -359,4 +419,44 @@ a:hover{
 
 .content-panel.active {
     display: block;
+}
+
+.breakdown {
+    font-size: 14px;
+    margin: 12px 0 10px;
+}
+
+.breakdown h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.breakdown h5 {
+    font-size: 16px;
+}
+
+.breakdown p {
+    margin-bottom: 5px;
+}
+
+.key-terms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto); 
+    margin: 16px 0;
+    gap: 10px;
+}
+
+button.primary {
+    background: var(--cream);
+    padding: 7px 7px;
+    border-radius: 10px;
+    border: 1px solid var(--gold);
+}
+
+button.primary:hover {
+    background: var(--gold);
+    border-color: var(--border);
+    transform: translateY(-5px);
 }
