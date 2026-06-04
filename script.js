@@ -165,8 +165,8 @@ const subUnits = {
         </p>
         <ul>
             <li>Meritocracy: Positions were awarded based on performance rather than birth</li>
-            <li>Civil Service Exam: To join the government, men had to pass exams based on Confucianism. This created the scholar gentry class<li>
-            <li>The bureaucracy eventually became so large and expensive that it drained the empire's wealth, contributing to its decline<li>
+            <li>Civil Service Exam: To join the government, men had to pass exams based on Confucianism. This created the scholar gentry class</li>
+            <li>The bureaucracy eventually became so large and expensive that it drained the empire's wealth, contributing to its decline</li>
         </ul>
 
         <h5>Economic Revolution</h5>
@@ -191,7 +191,7 @@ const subUnits = {
             <span class="key-term">Foot binding</span>
             <span class="key-term">Buddhism</span>
             <span class="key-term">Theravada Buddhism</span>
-            <span class="key-term">Mahayana Buddhism/span>
+            <span class="key-term">Mahayana Buddhism</span>
             <span class="key-term">Tibetan Buddhism</span>
             <span class="key-term">Syncretic</span>
             <span class="key-term">Chan (Zen) Buddhism</span>
@@ -261,8 +261,8 @@ const subUnits = {
         </p>
         <ul>
             <li>Centralized governments that weakened local nobles</li>
-            <li>Large-scale military conquests<li>
-            <li>Diverse populations across sprawling landmasses<li>
+            <li>Large-scale military conquests</li>
+            <li>Diverse populations across sprawling landmasses</li>
         </ul>
 
         <h5>Islamic Gunpowder Empires</h5>
@@ -326,16 +326,16 @@ const subUnits = {
             <span class="key-term">Qing Dynasty</span>
             <span class="key-term">Kangxi</span>
             <span class="key-term">Emperor Qianlong</span>
-            <span class="key-term">Gutenberg Printing Press - invented in Europe, led to the increase in literacy</span>
-            <span class="key-term">Gunpowder Empires - large multiethnic states in Southwest, Central, and South Asia that relied on firearms to conquer and control territories</span>
+            <span class="key-term"><strong>Gutenberg Printing Press</strong> - invented in Europe, led to the increase in literacy</span>
+            <span class="key-term"><strong>Gunpowder Empires</strong> - large multiethnic states in Southwest, Central, and South Asia that relied on firearms to conquer and control territories</span>
             <span class="key-term">Ottoman Empire</span>
-            <span class="key-term">shah - king or emperor</span>
+            <span class="key-term"><strong>shah</strong> - king or emperor</span>
             <span class="key-term">Safavid Empire</span>
             <span class="key-term">Mughal Empire</span>
-            <span class="key-term">ghazi idea - a model for warrior life that blended the cooperative values of nomadic culture with the willingness to serve as a holy fighter for Islam</span>
-            <span class="key-term">castes - social groupings designated at birth, using in the Mughal Empire (and currently in India)</span>
+            <span class="key-term"><strong>ghazi idea</strong> - a model for warrior life that blended the cooperative values of nomadic culture with the willingness to serve as a holy fighter for Islam</span>
+            <span class="key-term"><strong>castes</strong> - social groupings designated at birth, using in the Mughal Empire (and currently in India)</span>
             <span class="key-term">Ivan IV (Russia)</span>
-            <span class="key-term">Tamerlane - led army into ruthless conquests in Persia and India, ghazi ideal fit Tamerlane</span>
+            <span class="key-term"><strong>Tamerlane</strong> - led army into ruthless conquests in Persia and India, ghazi ideal fit Tamerlane</span>
             <span class="key-term">Suleiman I (Ottoman Empire)</span>
             <span class="key-term">Ismail (Safavid Empire)</span>
             <span class="key-term">Shah Abbas I (Safavid Empire)</span>
@@ -384,7 +384,7 @@ const subUnits = {
         saqs: [
             {
                 prompt: "Use the passage below to answer all parts of the question that follows.",
-                source: '"The Moral Nature Being uptight and modest, reserved and quiet, correct and dignified , sincere and honest: these constitute the moral nature of a woman. Being filial and respectful, humane and perspicacious [shrewd, wise], loving and warm. meek and gentle: these represent the complete development of the moral nature. The moral nature of being.innate in our endowment, it becomes transformed and fulfilled through practice. It is not something that comes from the outside but is actually rooted in our very selves. Cultivation of the Self .. . Now if the self is not cultivated, then vi1tue will not be established. If one\'s virtue is not established, rarely can one be an influence for good in the family - bow much less in. the wider world. Therefore, the wife is one who follows her husband. The way of husband and wife is the principle of the strong and the weak. In the past, the reason why enlightened monarchs were careful about establishing marriage was that they valued the way of procreation and perpetuation. [The rise and faU of the state is intimately linked to the prosperity or decline of the family.] " Empress Xu, Instructions for the Inner Quarters. c. J 420',
+                source: '"The Moral Nature Being uptight and modest, reserved and quiet, correct and dignified , sincere and honest: these constitute the moral nature of a woman. Being filial and respectful, humane and perspicacious [shrewd, wise], loving and warm. meek and gentle: these represent the complete development of the moral nature. The moral nature of being.innate in our endowment, it becomes transformed and fulfilled through practice. It is not something that comes from the outside but is actually rooted in our very selves. Cultivation of the Self .. . Now if the self is not cultivated, then vi1tue will not be established. If one\'s virtue is not established, rarely can one be an influence for good in the family - bow much less in. the wider world. Therefore, the wife is one who follows her husband. The way of husband and wife is the principle of the strong and the weak. In the past, the reason why enlightened monarchs were careful about establishing marriage was that they valued the way of procreation and perpetuation. [The rise and faU of the state is intimately linked to the prosperity or decline of the family.] " - Empress Xu, Instructions for the Inner Quarters. c. J 420',
                 parts: [
                     { label: "Part A", prompt: "Describe ONE way in which Xu's argument was influenced by long-standing Asian cultural traditions." },
                     { label: "Part B", prompt: "Explain ONE example of Xu's recommendations to Chinese women that cross boundaries of gender in the period between c. 1200 and c. 1450." },
@@ -467,9 +467,7 @@ function UnitDetails(unitId) {
             <div class="breakdown">${data.breakdown}</div>
         </div>
 
-        <div class="content-panel" id="panel"-${sub}-breakdown">
-            <div class="breakdown-prose">${data.breakdown}</div>
-        </div>
+        
 
         <div class="content-panel" id="panel-${sub}-mcq">
           ${data.mcqs.length ? data.mcqs.map((q, qi) => renderMCQ(q, `${sub}-${qi}`)).join('') : '<p style="color:var(--text-dim); font-style:italic;">No MCQs added yet for this subsection.</p>'}
@@ -505,7 +503,7 @@ function UnitDetails(unitId) {
 
 function switchSub(sub, btn) {
     document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.sub-content').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.subsection-content').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('sub-' + sub).classList.add('active');
 }
@@ -526,7 +524,7 @@ function renderMCQ(q, id) {
         <div class="question-text">${q.question}</div>
         <div class="answer-options">
             ${q.options.map((opt, i) => `
-                <button class="answer-button" onclick="checkAnswer(this, ${i}, ${q.correct}, '${id})" id="ans-${id}-${i}">
+                <button class="answer-button" onclick="checkAnswer(this, ${i}, ${q.correct}, '${id}')" id="ans-${id}-${i}">
                     <span class="answer-letter">${letters[i]}</span>
                     <span>${opt}</span>
                 </button> 
@@ -540,11 +538,11 @@ function renderMCQ(q, id) {
     `;
 }
 
-function checkAnswer(btn, chose, correct, id) {
+function checkAnswer(btn, chosen, correct, id) {
     const parent = btn.closest('.question-block');
     parent.querySelectorAll('.answer-button').forEach(b => b.disabled = true);
 
-    if (chose === correct) {
+    if (chosen === correct) {
         btn.classList.add('correct');
     }
     else {
@@ -559,7 +557,7 @@ function renderSAQ(s, id) {
     return `
     <div class="saq-block">
         <p class="saq-prompt">${s.prompt}</p>
-        ${s.source ? `<blockquote style="border-left: 3px solid var(--gold-dim); padding-left: 16px; margin: 0 0 20px; font-style: italic; color: var(--text-dim);
+        ${s.source ? `<blockquote style=" padding-left: 10px; margin: 0 0 20px; font-style: italic; color: var(--text-dim);
             font-size: 14px;">${s.source}</blockquote>` : ''}
         <div class="saq-parts">
             ${s.parts.map((p, pi) => `
@@ -571,7 +569,7 @@ function renderSAQ(s, id) {
         </div>
         <button class="button primary" onclick="gradeSAQ('${id}', ${s.parts.length})">Get AI Feedback</button>
         <div class="ai-feedback" id="saq-feedback-${id}">
-            <div class="ai-feedback-head">AI Grader Feedback</div>
+            <div>AI Grader Feedback</div>
             <div id="saq-feedback-content-${id}"></div>
         </div>
     </div>
@@ -653,11 +651,11 @@ function selectPrompts(type, unitId, index, el) {
     selectedLEQPrompts[unitId] = index;
 }
 
-const GEMINI_API_KEY = 'AIzaSyBdoIOmMbj_Dew-o5Ep9L_4IEMomZQX_C8';
-const GEMINI_MODEL = 'gemini-flash-latest';
+const GEMINI_API_KEY = 'AQ.Ab8RN6J1ZzauaHt5OSczQCDRmEy5WJQYxuY7V1lFsR0gRD5rmA';
+const GEMINI_MODEL = 'gemini-2.5-flash';
 
 async function callGemini(prompt) {
-    const url = "https://generativelanguage.googleapis.com/v1beta/models/$\{GEMINI_MODEL\}:generateContent?key=$\{GEMINI_API_KEY\}";
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
     const response = await fetch(url, {
         method: 'POST',
