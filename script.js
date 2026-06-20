@@ -586,14 +586,15 @@ function renderUnitLEQ(unit) {
         </div>
         
         <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 18px;">
-            On the real exam you choose <strong style="color: var(--cream);">one</strong> of three prompts. Select ta prompt below, then write your full essay response. Don't use any outside help. To really test yourself, only use your knowledge about the topic just like how you would on the AP exam.
+            On the real exam you choose <strong style="color: var(--cream);">one</strong> of three prompts. Select a prompt below, then write your full essay response. Don't use any outside help. To really test yourself, only use your knowledge about the topic just like how you would on the AP exam.
         </p>
         
-        <div class="essay-picker" id="led-picker-${unit.id}">
+        <div class="essay-picker" id="leq-picker-${unit.id}">
             ${prompts.map((p, i) => `
-                <div class="prompt-option ${i === 0 ? 'selected' : ''}" onclick="selectPrompt('leq', ${unit.id}, ${i}, this)">
-                <div class="prompt-label">Option ${i + 1}</div>
-                <p>${p}</p>
+                <div class="prompt-option ${i === 0 ? 'selected' : ''}" onclick="selectPrompts('leq', ${unit.id}, ${i}, this)">
+                    <div class="prompt-label">Option ${i + 1}</div>
+                    <p>${p}</p>
+                </div>
             `).join('')}
         </div>
         
@@ -602,9 +603,9 @@ function renderUnitLEQ(unit) {
             <textarea id="leq-response-${unit.id}" style="min-height: 320px;" placeholder="Write your full LEQ response here. Make sure to include you thesis, contextualization, evidence, and analysis all in one response (make sure to divide into paragraphs)..."></textarea>
         </div>
         <button class="button primary" style="margin-top: 11px;" onclick="gradeEssay('leq', ${unit.id})">Get AI Feedback</button>
-        <div class="ai-feedback" id="saq-feedback-${unit.id}">
+        <div class="ai-feedback" id="leq-feedback-${unit.id}">
             <div class="ai-feedback-head">AI Grader Feedback</div>
-            <div id="saq-feedback-content-${unit.id}"></div>
+            <div id="leq-feedback-content-${unit.id}"></div>
         </div>
     </div>
     `;
@@ -652,7 +653,7 @@ function selectPrompts(type, unitId, index, el) {
 }
 
 const GEMINI_API_KEY = 'AQ.Ab8RN6J1ZzauaHt5OSczQCDRmEy5WJQYxuY7V1lFsR0gRD5rmA';
-const GEMINI_MODEL = 'gemini-2.5-flash';
+const GEMINI_MODEL = 'gemini-2.0-flash';
 
 async function callGemini(prompt) {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
