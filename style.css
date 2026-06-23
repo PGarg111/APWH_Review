@@ -522,3 +522,27 @@ button.primary:hover {
         transform: translateX(0);
     }
 }
+
+.hover {
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.hover-img {
+    width: 2%;
+    height: 25%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    animation: bounce 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}

@@ -757,7 +757,7 @@ const motivationalMessage = [
     "AP World is about trends, connections, and major themes. Don't spend all your time memorizing minor details.",
     "A clear and historically accurate thesis is key to acing the DBQ and LEQ.",
     "Use the documents as evidence to support your thesis. Don't forget to HIPP at least 3 documents.",
-    "Don't get stuck on one MCQ. Guess, flag it, and move one.",
+    "Don't get stuck on one MCQ. Guess, flag it, and move on.",
     "If you ever run into writers block don't forget SPICE-T!",
     "Avoid cramming last minute. That is the worst thing to do right before the exam.",
     "Study for 20 minutes then take a break and get back to it!",
