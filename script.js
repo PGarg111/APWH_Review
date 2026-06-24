@@ -479,10 +479,12 @@ function UnitDetails(unitId) {
 
         <div class="content-panel" id="panel-${sub}-videos">
             <div class="video-grid">
-                ${data.videos.map(v => `
+                ${data.videos.map(v => {
+                    const cleanID = v.id.split('&')[0];
+                    return `
                     <div class="video">
                         <div class="video-embed">
-                            <iframe src="https://www.youtube.com/embed/${v.id}" allowfullscreen loading="lazy"></iframe>
+                            <iframe src="https://www.youtube-nocookie.com/embed/${cleanID}" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
                         </div>
                         <div class="video-info">
                             <h4>${v.title}</h4>
@@ -490,7 +492,7 @@ function UnitDetails(unitId) {
                         </div>
                     </div>
                     `
-        ).join('')}
+                }).join('')}
             </div>
         </div>
     </div>
