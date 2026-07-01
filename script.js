@@ -393,8 +393,8 @@ const subUnits = {
             }
         ]
     }
-    
-    
+
+
 }
 
 
@@ -480,8 +480,8 @@ function UnitDetails(unitId) {
         <div class="content-panel" id="panel-${sub}-videos">
             <div class="video-grid">
                 ${data.videos.map(v => {
-                    const cleanID = v.id.split('&')[0];
-                    return `
+            const cleanID = v.id.split('&')[0];
+            return `
                     <div class="video">
                         <div class="video-embed">
                             <iframe src="https://www.youtube-nocookie.com/embed/${cleanID}" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
@@ -492,7 +492,7 @@ function UnitDetails(unitId) {
                         </div>
                     </div>
                     `
-                }).join('')}
+        }).join('')}
             </div>
         </div>
     </div>
@@ -611,25 +611,25 @@ function renderUnitLEQ(unit) {
         </div>
     </div>
     `;
+
 }
 
 function renderUnitDBQ(unit) {
     return `
     <div class="unit-essay-section">
-        <div class="section-head" style="margin-top: 35px;>
-            <h2>Unit ${unit.id} LEQ</h2>
-            <span class="tag">Document Based Question. Choose one prompt from below</span>
+        <div class="section-head" style="margin-top: 35px;">
+            <h2>Unit ${unit.id} DBQ</h2>
+            <span class="tag">Document based question. Use the documents provided to answer the prompt.</span>
         </div>
 
         <div class="saq-block">
             <div class="question-number">DBQ Prompt</div>
             <p class="saq-prompt">${unit.dbq.prompt}</p>
-            <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 18px; font-style: italic;">${unit.dbq.note}</p>
-            
-        
-            <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 18px;">
-                On the real exam you choose <strong style="color: var(--cream);">one</strong> of three prompts. Select ta prompt below, then write your full essay response. Don't use any outside help. To really test yourself, only use your knowledge about the topic just like how you would on the AP exam.
-            </p>
+            <div style="margin-bottom: 18px;">
+                <a href="${unit.dbq.note}" download class="dbq-download-button" target="_blank" style="color: var(--gold); font-size: 14px; text-decoration: underline; font-weight: 500;">
+                    Click here to download the DBQ Documents (PDF)
+                </a>
+            </div>
         
             <div class="saq-part">
                 <label>Your Essay Response</label>
@@ -647,11 +647,15 @@ function renderUnitDBQ(unit) {
 
 let selectedLEQPrompts = {};
 
-function selectPrompts(type, unitId, index, el) {
-    const picker = document.getElementById(`${type}-picker-${unitId}`);
-    picker.querySelectorAll('.prompt option').forEach(o => o.classList.remove('selected'));
-    el.classList.add('selected');
-    selectedLEQPrompts[unitId] = index;
+function selectPrompts(type, unitId, index, element) {
+    const picker = document.getElementById(`${type}-picker-${unitId}`)
+
+    if (picker) {
+        const options = picker.querySelectorAll('.prompt-option');
+        options.forEach(opt => opt.classList.remove('selected'));
+    }
+
+    element.classList.add('selected');
 }
 
 const GEMINI_API_KEY = 'AQ.Ab8RN6J1ZzauaHt5OSczQCDRmEy5WJQYxuY7V1lFsR0gRD5rmA';

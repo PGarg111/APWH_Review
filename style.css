@@ -308,9 +308,9 @@ a:hover{
     font-weight: 600;
 }
 
-.saq-block {
+.saq-block{
     background: none;
-    border: 1px solid var(--border);
+    border: none;
     border-radius: 10px;
     margin-bottom: 7px;
     padding: 15px 15px;
@@ -411,6 +411,7 @@ a:hover{
 
 .subsection-content.active {
     display: block;
+    animation: slide-in 1s ease-in-out forwards;
 }
 
 .content-tabs {
@@ -428,6 +429,7 @@ a:hover{
     margin-right: 10px;
     margin-bottom: 15px;
     border: none;
+    
 }
 
 .content-tab:hover {
@@ -446,6 +448,7 @@ a:hover{
 
 .content-panel.active {
     display: block;
+    animation: slide-in 1s ease-in-out forwards;
 }
 
 .breakdown {
@@ -501,20 +504,16 @@ button.primary:hover {
     margin-bottom: 5px;
 }
 
-.prompt-option:hover {
-    border: var(--gold);
-    background-color: var(--gold);
-}
 
-.prompt-option.selected {
-    border: var(--gold);
+.prompt-option.selected, .prompt-option:hover{
+    border: 1px solid var(--gold);
     background-color: var(--gold);
 }
 
 @keyframes slide-in {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-70px);
     }
 
     100% {
@@ -584,3 +583,18 @@ button.primary:hover {
     height: 100%;
     border: none;
 }
+
+.saq-part textarea {
+    width: 100%;
+    background: var(--cream);
+    padding: 5px 5px;
+    resize: vertical;
+    border-radius: 10px;
+    min-height: 90px;
+}
+
+.saq-part textarea:focus {
+    outline: none;
+    border-color: var(--gold-dim);
+}
+
