@@ -15,7 +15,15 @@ const Units = [
         dbq: {
             prompt: "Using the documents and your knowledge of world history, evaluate the extent to which contact among groups of people influenced cultural developments in sub-Saharan African during the time period c. 1200 to c. 1450. The documents have been edited for the purpose of this exercise. You are advised to spend 15 minutes planning and 45 minutes writing your answer.",
             note: "assests/notes/unit1DBQ.pdf"
-        }
+        },
+        videos: [
+            { title: "Developments in EAST ASIA [AP World Review Unit 1 Topic 1]", id: "HfIWZhXt7fY&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=1" },
+            { title: "Developments in DAR-AL-ISLAM [AP World Review—Unit 1 Topic 2]", id: "O9P1TaBnhg8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=2" },
+            { title: "State Building in SOUTH Asia & SOUTHEAST Asia [AP World Review—Unit 1 Topic 3]", id: "AMGPVDvo2VE&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=3" },
+            { title: "State-Building in the AMERICAS [AP World History Review—Unit 1 Topic 4]", id: "ellUmfocjj8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=4" },
+            { title: "State-Building in AFRICA [AP World Review—Unit 1 Topic 5]", id: "p76pWQi9Hd8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=5" },
+            { title: "Developments in EUROPE [AP World History Review—Unit 1 Topic 6]", id: "ZaGC4rlc7nk&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=6" }
+        ]
     },
     {
         id: 2, title: "Networks of Exchange", period: "c. 1200 to c. 1450",
@@ -201,14 +209,6 @@ const subUnits = {
             <span class="key-term">Polygyny</span>
         </div>
         `,
-        videos: [
-            { title: "Developments in EAST ASIA [AP World Review Unit 1 Topic 1]", id: "HfIWZhXt7fY&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=1" },
-            { title: "Developments in DAR-AL-ISLAM [AP World Review—Unit 1 Topic 2]", id: "O9P1TaBnhg8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=2" },
-            { title: "State Building in SOUTH Asia & SOUTHEAST Asia [AP World Review—Unit 1 Topic 3]", id: "AMGPVDvo2VE&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=3" },
-            { title: "State-Building in the AMERICAS [AP World History Review—Unit 1 Topic 4]", id: "ellUmfocjj8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=4" },
-            { title: "State-Building in AFRICA [AP World Review—Unit 1 Topic 5]", id: "p76pWQi9Hd8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=5" },
-            { title: "Developments in EUROPE [AP World History Review—Unit 1 Topic 6]", id: "ZaGC4rlc7nk&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=6" }
-        ],
         mcqs: [
             {
                 question: "Questions 1-3 refer to the passage. [Hangzhou , China, has] ten principal markets .... [They] are all squares of half a mile to the side, and along their front passes the main street, which is 40 paces in width, and runs straight from end to end of the city, crossing many bridges of easy and commodious [convenient] approach .. . . So also parallel to this great street, but at the back of the market places, there runs a very large canal, on the bank of which towards the squares are built great houses of stone , in which the merchants from India and other foreign parts store their wares, to be handy for the markets. In each of the squares is held a market three days in the week, frequented by 40,000 or 50,000 persons.  - Marco Polo. The Travels of Marco Polo, c. L300. Based on the passage, which of the statements concerning the trading city of Hangzhou is most accurate?",
@@ -464,7 +464,6 @@ function UnitDetails(unitId) {
           <button class="content-tab active" onclick="switchContentTab('${sub}', 'breakdown', this)">Breakdown</button>
           <button class="content-tab" onclick="switchContentTab('${sub}', 'mcq', this)">MCQ</button>
           <button class="content-tab" onclick="switchContentTab('${sub}', 'saq', this)">SAQ</button>
-          <button class="content-tab" onclick="switchContentTab('${sub}', 'videos', this)">Videos</button>
         </div>
 
         <div class="content-panel active" id ="panel-${sub}-breakdown">
@@ -481,30 +480,15 @@ function UnitDetails(unitId) {
           ${data.saqs.length ? data.saqs.map((s, si) => renderSAQ(s, `${sub}-${si}`)).join('') : '<p style="color:var(--text-dim); font-style:italic;">No SAQs added yet for this subsection.</p>'}
         </div>
 
-        <div class="content-panel" id="panel-${sub}-videos">
-            <div class="video-grid">
-                ${data.videos.map(v => {
-            const cleanID = v.id.split('&')[0];
-            return `
-                    <div class="video">
-                        <div class="video-embed">
-                            <iframe src="https://www.youtube-nocookie.com/embed/${cleanID}" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
-                        </div>
-                        <div class="video-info">
-                            <h4>${v.title}</h4>
-                            <p>Heimler Videos</p>
-                        </div>
-                    </div>
-                    `
-        }).join('')}
-            </div>
-        </div>
+        
     </div>
     `;
     }).join('');
 
+    document.getElementById('unit-videos').innerHTML = renderVideo(unit);
     document.getElementById('unit-leq').innerHTML = renderUnitLEQ(unit);
     document.getElementById('unit-dbq').innerHTML = renderUnitDBQ(unit);
+    
 }
 
 function switchSub(sub, btn) {
@@ -543,6 +527,8 @@ function renderMCQ(q, id) {
     </div>
     `;
 }
+
+
 
 function checkAnswer(btn, chosen, correct, id) {
     const parent = btn.closest('.question-block');
@@ -660,6 +646,35 @@ function selectPrompts(type, unitId, index, element) {
     }
 
     element.classList.add('selected');
+}
+
+function renderVideo(unit) {
+    if (!unit.videos || !unit.videos.length) return '';
+
+    return `
+    <div class="unit-essay-section">
+        <div class="section-head" style="margin-top: 35ps;">
+            <h2>Unit ${unit.id} Videos</h2>
+            <span class="tag">What these videos to review the core concepts of the unit</span>
+        </div>
+        <div class="video-grid" style="margin-top: 20px;">
+            ${unit.videos.map (v => {
+                const cleanID = v.id.split('&')[0];
+                return `
+                <div class="video">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube-nocookie.com/embed/${cleanID}" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>${v.title}</h4>
+                        <p>Heimler Videos</p>
+                    </div>
+                </div>
+                `;
+            }).join('')}
+        </div>
+    </div>
+    `;
 }
 
 const GEMINI_API_KEY = 'AQ.Ab8RN6J1ZzauaHt5OSczQCDRmEy5WJQYxuY7V1lFsR0gRD5rmA';
