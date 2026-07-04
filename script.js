@@ -8,8 +8,7 @@ const Units = [
             prompts: [
                 "By the 14th century, Islam, Hinduism, and Confucianism each included movements within them that placed greater emphasis on either emotion or reason. Develop and argument that evaluates the extent to which two religious or ethical systems of thought were similar or different up through the 15th century.",
                 "Because of its size, wealth, and cultural innovations, China had a significant influence on ite East Asia neighbors in the years 1200 to 1450-wether those neighbors were friendly or hostile. Develop an argument that evaluates the extent to which Chinese cultural traditions led to political or social change in other East Asian societies in that time period.",
-                "Abundant natural resources and the rise of powerful centralized governments affected Africans states between the 12th and the 15th centuries. Develop an argument that evaluates the extent to which change or continuity over time occurred in the economics and politics during that time period in one African state.",
-                "Abundant natural resources and the rise of powerful centralized governments affected American states between the 12th and the 15th centuries. Develop an argument that evaluates the extent to which change or continuity over time occurred in the economics and politics during that time period in one American state."
+                "Abundant natural resources and the rise of powerful centralized governments affected Africans states between the 12th and the 15th centuries. Develop an argument that evaluates the extent to which change or continuity over time occurred in the economics and politics during that time period in one African state."
             ]
         },
         dbq: {
@@ -23,6 +22,89 @@ const Units = [
             { title: "State-Building in the AMERICAS [AP World History Review—Unit 1 Topic 4]", id: "ellUmfocjj8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=4" },
             { title: "State-Building in AFRICA [AP World Review—Unit 1 Topic 5]", id: "p76pWQi9Hd8&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=5" },
             { title: "Developments in EUROPE [AP World History Review—Unit 1 Topic 6]", id: "ZaGC4rlc7nk&list=PLEHRHjICEfDUKsY0KFUEvmFCs8aCj0RO5&index=6" }
+        ],
+        flashcards: [
+            { 
+                term: "Champa Rice", 
+                definition: "A fast-ripening, drought-resistant strain of rice from Vietnam that allowed for two harvests per year, leading to a massive population boom in Song China"
+            },
+            { 
+                term: "Proto-industrialization", 
+                definition: ""
+            },
+            { 
+                term: "Artisans", 
+                definition: ""
+            },
+            { 
+                term: "Scholar Gentry", 
+                definition: ""
+            },
+            { 
+                term: "Filial Piety", 
+                definition: "A Confucian virtue emphasizing extreme duty, respect, and obedience toward one's parents and ancestors."
+            },
+            { 
+                term: "Grand Canal", 
+                definition: ""
+            },
+            { 
+                term: "Imperial Bureaucracy", 
+                definition: ""
+            },
+            { 
+                term: "Meritocracy", 
+                definition: ""
+            },
+            { 
+                term: "Woodblock Printing", 
+                definition: ""
+            },
+            { 
+                term: "Foot Binding", 
+                definition: ""
+            },
+            { 
+                term: "Buddhism", 
+                definition: ""
+            },
+            { 
+                term: "Theravada Buddhism", 
+                definition: ""
+            },
+            { 
+                term: "Mahayana Buddhism", 
+                definition: ""
+            },
+            { 
+                term: "Tibetan Buddhism", 
+                definition: ""
+            },
+            { 
+                term: "Syncretic", 
+                definition: ""
+            },
+            { 
+                term: "Chan (Zen) Buddhism", 
+                definition: ""
+            },
+            { 
+                term: "Neo-Confucianism", 
+                definition: ""
+            },
+            { 
+                term: "Heian Period", 
+                definition: ""
+            },
+            { 
+                term: "Nuclear Families", 
+                definition: ""
+            },
+            { 
+                term: "Polygyny", 
+                definition: ""
+            },
+            
         ]
     },
     {
@@ -34,7 +116,7 @@ const Units = [
                 "Some historians consider the Mongols' military success and vast commercial empire in the 13th century as the beginning of the early modern era. Develop an argument that evaluates the extent to which the Mongol Empire was significant in larger patterns of continuity or change between 1200-1450.",
                 "Goods and ideas flowed through the African and Eurasian trade networks in the period from 1200-1450. Develop an argument that evaluates the extent to which the various networks of exchange in the time and place were similar or different.",
                 "Weather patterns, foods, and diseases affected exchange networks in Eurasia and Africa in the period from 1200 to 1450. Develop an argument that evaluates the extent to which various networks of exchange in Afro-Eurasia during the time affected the environment.",
-                "ALthough the primary purpose of most African and Eurasian trading networks between 1200 and 1450 was economic, ideas and art also traveled through them. Develop an argument that evaluates the extent to which trading networks in these regions between 1200 and 1450 affected the diffusion of cultural traditions."
+                "Although the primary purpose of most African and Eurasian trading networks between 1200 and 1450 was economic, ideas and art also traveled through them. Develop an argument that evaluates the extent to which trading networks in these regions between 1200 and 1450 affected the diffusion of cultural traditions."
             ]
         },
         dbq: {
@@ -50,14 +132,91 @@ const Units = [
             prompts: [
                 "In Africa and Eurasia from 1450 to 1750, various forms of Islam and Christianity were key factors in the expansion of empires. Develop an argument that evaluates the extent to which the various belief systems showed continuity or change over time during the period from 1450 to 1750.",
                 "Rulers of empires in Africa and Eurasia from 1450 to 1750 developed new methods of governing to solidify their authority over their citizens. Develop an argument that evaluates the extent to which changes in government caused the consolidation of power in empires in the period 1450 to 1750.",
-                "New technology, including gunpowder weapons, shaping empires in throughout southern and southwestern Asia from 1450 to 1750. Develop an argument that evaluates the extent to which various land-based empires in southern and southwestern Asia developed in similar ways from 1450 to 1750.",
-                "New technology, including gunpowder weapons, shaped empires in Russia and China from 1450 to 1750. Develop an argument that evaluates the extent to which various land-based empires in Russia and China developed in similar ways from 1450 to 1750."
+                "New technology, including gunpowder weapons, shaping empires in throughout southern and southwestern Asia from 1450 to 1750. Develop an argument that evaluates the extent to which various land-based empires in southern and southwestern Asia developed in similar ways from 1450 to 1750."
             ]
         },
         dbq: {
             prompt: "Using the documents and your knowledge of world history, evaluate the extent to which Peter the Great took steps during his reign (1682-1725) to modernize Russia and transform it into a major European power.",
             note: "assests/notes/unit3DBQ.pdf"
-        }
+        },
+        flashcards: [
+            { 
+                term: "Ming Dynasty", 
+                definition: ""
+            },
+            { 
+                term: "Manchu", 
+                definition: ""
+            },
+            { 
+                term: "Qing Dynasty", 
+                definition: ""
+            },
+            { 
+                term: "Kangxi", 
+                definition: ""
+            },
+            { 
+                term: "Emperor Qianlong", 
+                definition: ""
+            },
+            { 
+                term: "Gutenberg Printing Press", 
+                definition: "invented in Europe, led to the increase in literacy"
+            },
+            { 
+                term: "Gunpowder Empires", 
+                definition: "large multiethnic states in Southwest, Central, and South Asia that relied on firearms to conquer and control territories"
+            },
+            { 
+                term: "Ottoman Empire", 
+                definition: ""
+            },
+            { 
+                term: "shah", 
+                definition: "king or emperor"
+            },
+            { 
+                term: "Safavid Empire", 
+                definition: ""
+            },
+            { 
+                term: "Mughal Empire", 
+                definition: ""
+            },
+            { 
+                term: "Ghazi Ideal", 
+                definition: "a model for warrior life that blended the cooperative values of nomadic culture with the willingness to serve as a holy fighter for Islam"
+            },
+            { 
+                term: "Castes", 
+                definition: "social groupings designated at birth, using in the Mughal Empire (and currently in India)"
+            },
+            { 
+                term: "Ivan IV", 
+                definition: ""
+            },
+            { 
+                term: "Tamerlane", 
+                definition: "led army into ruthless conquests in Persia and India, ghazi ideal fit Tamerlane"
+            },
+            { 
+                term: "Suleiman I", 
+                definition: ""
+            },
+            { 
+                term: "Ismail", 
+                definition: ""
+            },
+            { 
+                term: "Shah Abbas I", 
+                definition: ""
+            },
+            { 
+                term: "Akbar", 
+                definition: ""
+            },
+        ]
     },
     {
         id: 4, title: "Transoceanic Interconnections", period: "c. 1450 to c. 1750",
@@ -193,10 +352,10 @@ const subUnits = {
             <span class="key-term">Scholar Gentry</span>
             <span class="key-term">Filial Piety</span>
             <span class="key-term">Grand Canal</span>
-            <span class="key-term">Imperial bureaucracy</span>
+            <span class="key-term">Imperial Bureaucracy</span>
             <span class="key-term">Meritocracy</span>
-            <span class="key-term">Woodblock printing</span>
-            <span class="key-term">Foot binding</span>
+            <span class="key-term">Woodblock Printing</span>
+            <span class="key-term">Foot Binding</span>
             <span class="key-term">Buddhism</span>
             <span class="key-term">Theravada Buddhism</span>
             <span class="key-term">Mahayana Buddhism</span>
@@ -205,7 +364,7 @@ const subUnits = {
             <span class="key-term">Chan (Zen) Buddhism</span>
             <span class="key-term">Neo-Confucianism</span>
             <span class="key-term">Heian Period</span>
-            <span class="key-term">Nuclear families</span>
+            <span class="key-term">Nuclear Families</span>
             <span class="key-term">Polygyny</span>
         </div>
         `,
@@ -330,16 +489,16 @@ const subUnits = {
             <span class="key-term">Qing Dynasty</span>
             <span class="key-term">Kangxi</span>
             <span class="key-term">Emperor Qianlong</span>
-            <span class="key-term"><strong>Gutenberg Printing Press</strong> - invented in Europe, led to the increase in literacy</span>
-            <span class="key-term"><strong>Gunpowder Empires</strong> - large multiethnic states in Southwest, Central, and South Asia that relied on firearms to conquer and control territories</span>
+            <span class="key-term">Gutenberg Printing Press</span>
+            <span class="key-term">Gunpowder Empires</span>
             <span class="key-term">Ottoman Empire</span>
-            <span class="key-term"><strong>shah</strong> - king or emperor</span>
+            <span class="key-term">shah</span>
             <span class="key-term">Safavid Empire</span>
             <span class="key-term">Mughal Empire</span>
-            <span class="key-term"><strong>ghazi idea</strong> - a model for warrior life that blended the cooperative values of nomadic culture with the willingness to serve as a holy fighter for Islam</span>
-            <span class="key-term"><strong>castes</strong> - social groupings designated at birth, using in the Mughal Empire (and currently in India)</span>
+            <span class="key-term">ghazi idea</span>
+            <span class="key-term">castes</span>
             <span class="key-term">Ivan IV (Russia)</span>
-            <span class="key-term"><strong>Tamerlane</strong> - led army into ruthless conquests in Persia and India, ghazi ideal fit Tamerlane</span>
+            <span class="key-term">Tamerlane</span>
             <span class="key-term">Suleiman I (Ottoman Empire)</span>
             <span class="key-term">Ismail (Safavid Empire)</span>
             <span class="key-term">Shah Abbas I (Safavid Empire)</span>
@@ -421,6 +580,10 @@ function showPage(pageId, unitId) {
 
     if (pageId === 'unit-detail' && unitId) {
         UnitDetails(unitId);
+    }
+
+    if (pageId === 'flashcards') {
+        initFlashcards();
     }
 }
 
@@ -675,6 +838,53 @@ function renderVideo(unit) {
         </div>
     </div>
     `;
+}
+
+function initFlashcards() {
+    const tabs = document.getElementById('flashcard-unit-tabs');
+    if (!tabs) return;
+
+    tabs.innerHTML = Units.map((u, i) =>
+        `<button class="sub-tab ${i === 0 ? 'active' : ''}" onclick="selectFlashcardUnit(${u.id}, this)">Unit ${u.id}</button>`
+    ).join('');
+
+    if (Units.length > 0) {
+        renderFlashcards(Units[0].id);
+    }
+}
+
+function selectFlashcardUnit(unitId, button) {
+    document.querySelectorAll('#flashcard-unit-tabs .sub-tab').forEach(t => t.classList.remove('active'));
+
+    button.classList.add('active');
+
+    renderFlashcards(unitId);
+}
+
+function renderFlashcards(unitId) {
+    const grid = document.getElementById('flashcard-grid');
+    if (!grid) return;
+
+    const unit = Units.find(u => u.id === unitId);
+
+    if (!unit || !unit.flashcards || unit.flashcards.length === 0) {
+        grid.innerHTML = `
+        <p style="color: var(--text-dim); font-style: italic; margin-top: 20px; grid-column: 1/-1;">No flashcards added for Unit ${unitId} yet</p>`;
+        return;
+    }
+
+    grid.innerHTML = unit.flashcards.map (fc => `
+        <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="inner">
+                <div class="front">
+                    <span>${fc.term}</span>
+                </div>
+                <div class="back">
+                    <p>${fc.definition}</p>
+                </div>
+            </div>
+        </div>
+    `).join('');
 }
 
 const GEMINI_API_KEY = 'AQ.Ab8RN6J1ZzauaHt5OSczQCDRmEy5WJQYxuY7V1lFsR0gRD5rmA';
