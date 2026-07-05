@@ -60,7 +60,7 @@
     </div>
 
     <div class="page hidden" id="flashcards" style="animation: slide-in 1s ease-in-out forwards">
-        <div class="section-header">
+        <div class="section-header" style="margin-bottom: 10px;">
             <h2>Flashcards</h2>
             <span class="tag">Select a unit to begin reviewing key terms</span>
         </div>
@@ -68,9 +68,9 @@
         <div class="subsection-tabs" id="flashcard-unit-tabs"></div>
         <div class="flashcard-deck">
             <div class="deck">
-                <button class="back arrow" onclick="changeCard(-1)">←</button>
+                <button class="arrow" onclick="changeCard(-1)">←</button>
                 <div id="card-space"></div>
-                <button class="back arrow" onclick="changeCard(-1)">→</button>
+                <button class="arrow" onclick="changeCard(+1)">→</button>
             </div>
             <div id="counter"></div>
         </div>

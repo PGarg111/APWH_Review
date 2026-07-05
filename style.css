@@ -16,7 +16,7 @@
     --gold: #c9a84c;
     --gold-dim:#8a6f2e;
     --cream:#f0e6cc;
-    --text:#d4c9b0;
+    --grey-gold:#d4c9b0;
     --text-dark: black;
     --text-dim:#7a7060;
     --red:#c0392b;
@@ -606,12 +606,46 @@ button.primary:hover {
     margin-top: 25px;
 }
 
-.flashcard {
-    background: transparent;
+.deck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 180px;
-    perspective: 1000px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#card-space {
+    flex-grow: 1;
+    max-width: 420px;
+    height: 240px;
+}
+
+#card-space .flashcard {
+    height: 100%;
+}
+
+.arrow {
+    margin-bottom: 0 !important;
+    padding: 12px 18px;
+    font-size: 16px;
+    white-space: nowrap;
+    background: var(--cream);
+    border: 1px solid var(--cream);
+    border-radius: 30px;
     cursor: pointer;
+}
+
+.arrow:hover{
+    background-color: var(--grey-gold);
+}
+
+#counter {
+    font-size: 16px;
+    color: var(--bg2);
+    font-weight: 600;
+    margin-top: 20px;
 }
 
 .inner {

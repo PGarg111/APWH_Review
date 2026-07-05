@@ -853,27 +853,54 @@ function initFlashcards() {
     }
 }
 
+let currentCardIndex = 0;
+let currentFlashcards = [];
+
 function selectFlashcardUnit(unitId, button) {
     document.querySelectorAll('#flashcard-unit-tabs .sub-tab').forEach(t => t.classList.remove('active'));
-
     button.classList.add('active');
 
     renderFlashcards(unitId);
 }
 
 function renderFlashcards(unitId) {
-    const grid = document.getElementById('flashcard-grid');
-    if (!grid) return;
+    const cardSpace = document.getElementById('card-space');
+    const counter = document.getElementById('counter');
+    
+    if (!cardSpace) 
+        return;
+
 
     const unit = Units.find(u => u.id === unitId);
 
-    if (!unit || !unit.flashcards || unit.flashcards.length === 0) {
-        grid.innerHTML = `
-        <p style="color: var(--text-dim); font-style: italic; margin-top: 20px; grid-column: 1/-1;">No flashcards added for Unit ${unitId} yet</p>`;
-        return;
+    if (!unit || !unit.flashcards || unit.flashcards.length === 0) 
+    {
+        currentCardIndex = 0;
+        currentFlashcards = [];
+        cardSpace.innerHTML = `<p style="color: var(--bg2); font-style: italic; text-align: center; margin-top:25px;">No flashcards added for Unit ${unitId} yet.</p>`;
+        
+        if (counter) counter.textContent = "";
+            return;
+
     }
 
-    grid.innerHTML = unit.flashcards.map (fc => `
+    currentFlashcards = unit.flashcards;
+    currentCardIndex = 0;
+
+    showCurrentCard();
+   
+}
+
+function showCurrentCard() {
+    const cardSpace = document.getElementById('card-space');
+    const counter = document.getElementById('counter');
+    
+    if (!cardSpace || currentCardIndex.length === 0) 
+        return;
+
+    const fc = currentFlashcards[currentCardIndex];
+
+    cardSpace.innerHTML = `
         <div class="flashcard" onclick="this.classList.toggle('flipped')">
             <div class="inner">
                 <div class="front">
@@ -884,7 +911,30 @@ function renderFlashcards(unitId) {
                 </div>
             </div>
         </div>
-    `).join('');
+    `;
+
+    if (counter) 
+    {
+        counter.textContent = `${currentCardIndex + 1} / ${currentFlashcards.length}`;
+    }
+}
+
+function changeCard(direction) {
+    if (currentFlashcards.length === 0)
+        return;
+
+    currentCardIndex += direction;
+
+    if (currentCardIndex < 0) 
+    {
+        currentCardIndex = currentFlashcards.length - 1;
+    }
+    else if (currentCardIndex >= currentFlashcards.length)
+    {
+        currentCardIndex = 0;
+    }
+
+    showCurrentCard();
 }
 
 const GEMINI_API_KEY = 'AQ.Ab8RN6J1ZzauaHt5OSczQCDRmEy5WJQYxuY7V1lFsR0gRD5rmA';
