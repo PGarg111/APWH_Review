@@ -30,15 +30,15 @@ const Units = [
             },
             { 
                 term: "Proto-industrialization", 
-                definition: ""
+                definition: "a set economic changes in which people in rural areas made more goods than they could sell. ex. Under the Song Dynasty, rural artisans and skilled craftworkers in China produced goods like steel in widely dispersed smelting facilities under government supervision, as well as porcelain and silk that reached consumers via expanding maritime and land trade networks."
             },
             { 
                 term: "Artisans", 
-                definition: ""
+                definition: "skilled craftworkers. ex. In the social structure of postclassical China, artisans were ranked below the scholar-gentry and farmers, but notably above merchants. This placement reflected Confucian values, which held a higher respect for artisans because they engaged in hard work to physically create new value, whereas merchants simply exchanged goods that others had made."
             },
             { 
                 term: "Scholar Gentry", 
-                definition: ""
+                definition: "a social class in China created by the expansion of the imperial bureaucracy"
             },
             { 
                 term: "Filial Piety", 
@@ -46,63 +46,63 @@ const Units = [
             },
             { 
                 term: "Grand Canal", 
-                definition: ""
+                definition: "an inexpensive and efficient internal waterway transportation system in China"
             },
             { 
                 term: "Imperial Bureaucracy", 
-                definition: ""
+                definition: "A vast government organization in which appointed officials carry out the empire's policies. It represented a key political continuity across centuries in China, serving as a main feature of governance from the Qin Dynasty all the way through the Song Dynasty."
             },
             { 
                 term: "Meritocracy", 
-                definition: ""
+                definition: "A bureaucratic system in which government officials obtain their positions by demonstrating their capability or merit (such as through examinations) rather than through wealth or aristocratic birth. The Chinese bureaucratic system during the Song Dynasty, which utilized the civil service exam to hire officials based on their scores."
             },
             { 
                 term: "Woodblock Printing", 
-                definition: ""
+                definition: "A printing technology in which text, images, or artwork are carved into blocks of wood, allowing people to create multiple copies of written works without manually transcribing each one by hand."
             },
             { 
                 term: "Foot Binding", 
-                definition: ""
+                definition: "A patriarchal constraint on women in which a young girl's feet are wrapped so tightly that the bones are broken and prevented from growing naturally. It restricted physical mobility to keep women out of the public sphere but signified elite social status."
             },
             { 
                 term: "Buddhism", 
-                definition: ""
+                definition: "A universalizing, monastic religion founded in India by Siddhartha Gautama that focuses on relieving personal suffering and achieving enlightenment (nirvana) by understanding the Four Noble Truths and following the Eightfold Path."
             },
             { 
                 term: "Theravada Buddhism", 
-                definition: ""
+                definition: "A major branch of Buddhism that focuses primarily on personal spiritual growth through silent meditation and strict self-discipline."
             },
             { 
                 term: "Mahayana Buddhism", 
-                definition: ""
+                definition: "A major branch of Buddhism that focuses on spiritual growth for all beings and heavily emphasizes acts of service."
             },
             { 
                 term: "Tibetan Buddhism", 
-                definition: ""
+                definition: "A distinct branch of Buddhism that centers its spiritual practice on chanting."
             },
             { 
-                term: "Syncretic", 
-                definition: ""
+                term: "Syncretism", 
+                definition: "The process by which two or more distinct cultural, religious, or philosophical systems blend and fuse together over time to create a completely new, combined tradition."
             },
             { 
                 term: "Chan (Zen) Buddhism", 
-                definition: ""
+                definition: "A syncretic faith formed by combining Buddhist doctrines with traditional Chinese Daoist principles, emphasizing direct experience and meditation over formal learning based on scripture."
             },
             { 
                 term: "Neo-Confucianism", 
-                definition: ""
+                definition: "A syncretic philosophical system that evolved in China between 770 and 840, combining rational Confucian thought with the abstract concepts of Daoism and Buddhism to emphasize ethics over the mysteries of God and nature."
             },
             { 
                 term: "Heian Period", 
-                definition: ""
+                definition: "A historical era in Japan (794–1185) during which the country experienced a golden age of achievements in literature and painting while emulating Chinese traditions."
             },
             { 
                 term: "Nuclear Families", 
-                definition: ""
+                definition: "A family unit consisting exclusively of a husband, a wife, and their immediate children, rather than an extended multi-generational household."
             },
             { 
                 term: "Polygyny", 
-                definition: ""
+                definition: "A patriarchal marital practice in which a man takes more than one wife at the same time."
             },
             
         ]
