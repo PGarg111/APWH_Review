@@ -720,3 +720,12 @@ button.primary:hover {
     z-index: 2;
     pointer-events: none;
 }
+
+.brain-dump {
+    width: 100%;
+    background: var(--cream);
+    padding: 5px 5px;
+    resize: vertical;
+    border-radius: 10px;
+    min-height: 45px;
+}

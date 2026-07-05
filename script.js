@@ -360,7 +360,7 @@ const subUnits = {
             <span class="key-term">Theravada Buddhism</span>
             <span class="key-term">Mahayana Buddhism</span>
             <span class="key-term">Tibetan Buddhism</span>
-            <span class="key-term">Syncretic</span>
+            <span class="key-term">Syncretism</span>
             <span class="key-term">Chan (Zen) Buddhism</span>
             <span class="key-term">Neo-Confucianism</span>
             <span class="key-term">Heian Period</span>
@@ -752,6 +752,11 @@ function renderUnitLEQ(unit) {
                 </div>
             `).join('')}
         </div>
+
+        <div class="brain-dump-area">
+                <label>LEQ Planning</label>
+                <textarea class="brain-dump" style="min-height: 320px;" placeholder="Plan your LEQ here..."></textarea>
+            </div>
         
         <div class="saq-part" style="margin-top: 38px;">
             <label>Your Essay Response</label>
@@ -782,6 +787,11 @@ function renderUnitDBQ(unit) {
                 <a href="${unit.dbq.note}" download class="dbq-download-button" target="_blank" style="color: var(--gold); font-size: 14px; text-decoration: underline; font-weight: 500;">
                     Click here to download the DBQ Documents (PDF)
                 </a>
+            </div>
+
+            <div class="brain-dump-area">
+                <label>DBQ Planning</label>
+                <textarea class="brain-dump" style="min-height: 320px;" placeholder="Plan your DBQ here..."></textarea>
             </div>
         
             <div class="saq-part">
