@@ -68,9 +68,13 @@
         <div class="subsection-tabs" id="flashcard-unit-tabs"></div>
         <div class="flashcard-deck">
             <div class="deck">
-                <button class="arrow" onclick="changeCard(-1)">←</button>
+                <button class="arrow arrow-back" onclick="changeCard(-1)">
+                    <img class="arrow-pic" src="up-arrow-icon-removebg-preview.png">
+                </button>
                 <div id="card-space"></div>
-                <button class="arrow" onclick="changeCard(+1)">→</button>
+                <button class="arrow arrow-next" onclick="changeCard(+1)">
+                    <img class="arrow-pic" src="up-arrow-icon-removebg-preview.png">
+                </button>
             </div>
             <div id="counter"></div>
         </div>

@@ -635,6 +635,20 @@ button.primary:hover {
     border: 1px solid var(--cream);
     border-radius: 30px;
     cursor: pointer;
+    width: 10%;
+}
+
+.arrow-pic {
+    width: 20%;
+    height: 2%;
+}
+
+.arrow-back {
+    transform: rotate(-90deg);
+}
+
+.arrow-next {
+    transform: rotate(90deg);
 }
 
 .arrow:hover{
