@@ -740,9 +740,9 @@ button.primary:hover {
 }
 
 .SPICET-button {
-    background: var(--cream);
+    background: none;
     color: var(--bg2);
-    border: 1px solid var(--border);
+    border: none;
     padding: 8px 12px;
     font-size: 12px;
     font-weight: 600;

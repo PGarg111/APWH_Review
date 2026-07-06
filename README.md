@@ -1,2 +1,2 @@
 # APWH_Review
-A website to help review for the AP World Exam
+I made a website which helps anyone taking the AP World History exam study and prepare for the exam. This website includes breakdowns, SAQ, MCQ, and SPICE-T information for each sub unit. For each unit there are videos as well as LEQ and DBQ practice. For the LEQ, DBQ, and SAQ there is any option to have AI (Gemini) grade the user's responses and give them real time feedback. The website also has flashcards for each unit which are the key terms for each sub unit. Even though I haven't added anything to the exam prep tab yet, when the user hovers on the nav bar it gives them text taking strategies for the exam and motivational messages.
