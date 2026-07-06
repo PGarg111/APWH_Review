@@ -561,33 +561,41 @@ const subUnits = {
 }
 
 
-function showPage(pageId, unitId) {
+function showPage(pageId, unitId) 
+{
     document.querySelectorAll('.page').forEach(page => {
-        if (page.id === pageId) {
+        if (page.id === pageId) 
+        {
             page.classList.remove('hidden');
         }
-        else {
+        else 
+        {
             page.classList.add('hidden');
         }
     });
 
-    document.querySelectorAll('.navbar-button').forEach(btn => {
+    document.querySelectorAll('.navbar-button').forEach(btn => 
+        {
         btn.classList.remove('active');
-        if (btn.textContent.toLowerCase().replace(' ', '') === pageId || (pageId === 'unit-detail' && btn.textContent === 'Units')) {
+        if (btn.textContent.toLowerCase().replace(' ', '') === pageId || (pageId === 'unit-detail' && btn.textContent === 'Units')) 
+        {
             btn.classList.add('active');
         }
     });
 
-    if (pageId === 'unit-detail' && unitId) {
+    if (pageId === 'unit-detail' && unitId) 
+    {
         UnitDetails(unitId);
     }
 
-    if (pageId === 'flashcards') {
+    if (pageId === 'flashcards') 
+    {
         initFlashcards();
     }
 }
 
-function renderUnitCards(containerId, limit) {
+function renderUnitCards(containerId, limit) 
+{
     const container = document.getElementById(containerId);
     const units = limit ? Units.slice(0, limit) : Units;
     container.innerHTML = units.map(u =>
@@ -600,9 +608,11 @@ function renderUnitCards(containerId, limit) {
     ).join('');
 }
 
-function UnitDetails(unitId) {
+function UnitDetails(unitId) 
+{
     const unit = Units.find(u => u.id === unitId);
-    if (!unit) return;
+    if (!unit) 
+        return;
 
     document.getElementById('unit-detail-title').textContent = `Unit ${unit.id}: ${unit.title}`;
     document.getElementById('unit-detail-tag').textContent = unit.period;
@@ -615,7 +625,8 @@ function UnitDetails(unitId) {
     const panelsEl = document.getElementById('subsection-panels');
     panelsEl.innerHTML = unit.subs.map((sub, i) => {
         const data = subUnits[sub];
-        if (!data) return `
+        if (!data) 
+            return `
         <div class="subsection-content ${i === 0 ? 'active' : ''}" id="sub-${sub}">
             <p style="color: var(--text-dim); font-style: italic;">Content for ${sub} coming soon - adding subsections</p>
         </div>
@@ -705,7 +716,8 @@ function switchSub(sub, btn)
     document.getElementById('sub-' + sub).classList.add('active');
 }
 
-function switchContentTab(sub, tab, btn) {
+function switchContentTab(sub, tab, btn) 
+{
     const parent = document.getElementById('sub-' + sub);
     parent.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
     parent.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
@@ -713,7 +725,8 @@ function switchContentTab(sub, tab, btn) {
     document.getElementById(`panel-${sub}-${tab}`).classList.add('active');
 }
 
-function renderMCQ(q, id) {
+function renderMCQ(q, id)
+{
     const letters = ["A", "B", "C", "D"];
     return `
     <div class="question-block">
@@ -737,14 +750,17 @@ function renderMCQ(q, id) {
 
 
 
-function checkAnswer(btn, chosen, correct, id) {
+function checkAnswer(btn, chosen, correct, id) 
+{
     const parent = btn.closest('.question-block');
     parent.querySelectorAll('.answer-button').forEach(b => b.disabled = true);
 
-    if (chosen === correct) {
+    if (chosen === correct) 
+    {
         btn.classList.add('correct');
     }
-    else {
+    else 
+    {
         btn.classList.add('incorrect');
         parent.querySelectorAll('.answer-button')[correct].classList.add('correct');
     }
@@ -752,7 +768,8 @@ function checkAnswer(btn, chosen, correct, id) {
     document.getElementById('exp-' + id).classList.add('visible');
 }
 
-function renderSAQ(s, id) {
+function renderSAQ(s, id) 
+{
     return `
     <div class="saq-block">
         <p class="saq-prompt">${s.prompt}</p>
@@ -775,7 +792,8 @@ function renderSAQ(s, id) {
     `;
 }
 
-function renderUnitLEQ(unit) {
+function renderUnitLEQ(unit) 
+{
     const prompts = unit.leq.prompts;
     return `
     <div class="unit-essay-section">
@@ -816,7 +834,8 @@ function renderUnitLEQ(unit) {
 
 }
 
-function renderUnitDBQ(unit) {
+function renderUnitDBQ(unit) 
+{
     return `
     <div class="unit-essay-section">
         <div class="section-head" style="margin-top: 35px;">
@@ -854,10 +873,12 @@ function renderUnitDBQ(unit) {
 
 let selectedLEQPrompts = {};
 
-function selectPrompts(type, unitId, index, element) {
+function selectPrompts(type, unitId, index, element) 
+{
     const picker = document.getElementById(`${type}-picker-${unitId}`)
 
-    if (picker) {
+    if (picker) 
+    {
         const options = picker.querySelectorAll('.prompt-option');
         options.forEach(opt => opt.classList.remove('selected'));
     }
@@ -865,8 +886,10 @@ function selectPrompts(type, unitId, index, element) {
     element.classList.add('selected');
 }
 
-function renderVideo(unit) {
-    if (!unit.videos || !unit.videos.length) return '';
+function renderVideo(unit) 
+{
+    if (!unit.videos || !unit.videos.length) 
+        return '';
 
     return `
     <div class="unit-essay-section">
@@ -894,15 +917,18 @@ function renderVideo(unit) {
     `;
 }
 
-function initFlashcards() {
+function initFlashcards() 
+{
     const tabs = document.getElementById('flashcard-unit-tabs');
-    if (!tabs) return;
+    if (!tabs) 
+        return;
 
     tabs.innerHTML = Units.map((u, i) =>
         `<button class="sub-tab ${i === 0 ? 'active' : ''}" onclick="selectFlashcardUnit(${u.id}, this)">Unit ${u.id}</button>`
     ).join('');
 
-    if (Units.length > 0) {
+    if (Units.length > 0) 
+    {
         renderFlashcards(Units[0].id);
     }
 }
@@ -910,14 +936,16 @@ function initFlashcards() {
 let currentCardIndex = 0;
 let currentFlashcards = [];
 
-function selectFlashcardUnit(unitId, button) {
+function selectFlashcardUnit(unitId, button) 
+{
     document.querySelectorAll('#flashcard-unit-tabs .sub-tab').forEach(t => t.classList.remove('active'));
     button.classList.add('active');
 
     renderFlashcards(unitId);
 }
 
-function renderFlashcards(unitId) {
+function renderFlashcards(unitId) 
+{
     const cardSpace = document.getElementById('card-space');
     const counter = document.getElementById('counter');
     
@@ -945,7 +973,8 @@ function renderFlashcards(unitId) {
    
 }
 
-function showCurrentCard() {
+function showCurrentCard() 
+{
     const cardSpace = document.getElementById('card-space');
     const counter = document.getElementById('counter');
     
@@ -973,7 +1002,8 @@ function showCurrentCard() {
     }
 }
 
-function changeCard(direction) {
+function changeCard(direction) 
+{
     if (currentFlashcards.length === 0)
         return;
 
@@ -994,7 +1024,8 @@ function changeCard(direction) {
 const GEMINI_API_KEY = 'AQ.Ab8RN6J1ZzauaHt5OSczQCDRmEy5WJQYxuY7V1lFsR0gRD5rmA';
 const GEMINI_MODEL = 'gemini-2.0-flash';
 
-async function callGemini(prompt) {
+async function callGemini(prompt) 
+{
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
     const response = await fetch(url, {
@@ -1009,7 +1040,8 @@ async function callGemini(prompt) {
         })
     });
 
-    if (!response.ok) {
+    if (!response.ok) 
+    {
         const error = await response.json();
         throw new Error(error.error?.message || 'API Error');
     }
@@ -1019,7 +1051,8 @@ async function callGemini(prompt) {
     return data.candidates[0].content.parts[0].text;
 }
 
-async function gradeSAQ(id, numParts) {
+async function gradeSAQ(id, numParts) 
+{
     const responses = [];
     for (let i = 0; i < numParts; i++) {
         responses.push(document.getElementById(`saq-${id}-${i}`)?.value || '');
@@ -1035,27 +1068,32 @@ async function gradeSAQ(id, numParts) {
 Student responses:
 ${responses.map((r, i) => `Part ${['A', 'B', 'C'][i]}: ${r || '[No response]'}`).join('\n')}`;
 
-    try {
+    try 
+    {
         const result = await callGemini(prompt);
         contentEl.innerHTML = result.replace(/\n/g, '<br>');
-    } catch (e) {
+    } catch (e) 
+    {
         contentEl.innerHTML = '<em style="color:var(--red);">Could not connect to AI grader. Check your API key.</em>';
     }
 }
 
-async function gradeEssay(type, unitId) {
+async function gradeEssay(type, unitId) 
+{
     let content = '';
     let feedbackId = '';
     let prompt = '';
 
     const unit = Units.find(u => u.id === unitId);
 
-    if (type === 'leq') {
+    if (type === 'leq') 
+    {
         content = document.getElementById(`leq-response-${unitId}`).value;
         feedbackId = `leq-feedback-${unitId}`;
         const promptIndex = selectedLEQPrompts[unitId] || 0;
         prompt = unit.leq.prompts[promptIndex];
-    } else {
+    } else 
+    {
         content = document.getElementById(`dbq-response-${unitId}`).value;
         feedbackId = `dbq-feedback-${unitId}`;
         prompt = unit.dbq.prompt;
@@ -1079,10 +1117,12 @@ ${rubric}
 Student response:
 ${content || '[No response provided]'}`;
 
-    try {
+    try 
+    {
         const result = await callGemini(aiPrompt);
         contentEl.innerHTML = result.replace(/\n/g, '<br>');
-    } catch (e) {
+    } catch (e) 
+    {
         contentEl.innerHTML = '<em style="color:var(--red);">Could not connect to AI grader. Check your API key.</em>';
     }
 }
@@ -1104,7 +1144,8 @@ const motivationalMessage = [
     "Take notes on all of the stimuli during MCQ's. These come in handy for outside evidence on DBQ, LEQ, SAQ."
 ];
 
-function setNavMessage() {
+function setNavMessage() 
+{
     const messageElement = document.getElementById('nav-quote');
     if (messageElement) {
         const randIdx = Math.floor(Math.random() * motivationalMessage.length);
@@ -1113,7 +1154,8 @@ function setNavMessage() {
 }
 
 const navbarElement = document.querySelector('.nav');
-if (navbarElement) {
+if (navbarElement) 
+{
     navbarElement.addEventListener('mouseenter', setNavMessage)
 }
 
