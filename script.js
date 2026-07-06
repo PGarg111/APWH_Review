@@ -327,45 +327,45 @@ const subUnits = {
         label: "Developments in East Asia",
         breakdown: `
         <h4>Overview</h4>
-        <h5>Song Dynasty</h5>
-        <p>The Song Dynasty (960-1279) was a period of relative stability and bureaucratic sophistication. Unlike previous empire that relied only on military power, the Song expanded the Imperial Bureaucracy. 
+        <h5 theme="P">Song Dynasty</h5>
+        <p theme="P">The Song Dynasty (960-1279) was a period of relative stability and bureaucratic sophistication. Unlike previous empire that relied only on military power, the Song expanded the Imperial Bureaucracy. 
         </p>
         <ul>
-            <li>Meritocracy: Positions were awarded based on performance rather than birth</li>
-            <li>Civil Service Exam: To join the government, men had to pass exams based on Confucianism. This created the scholar gentry class</li>
-            <li>The bureaucracy eventually became so large and expensive that it drained the empire's wealth, contributing to its decline</li>
+            <li theme="P">Meritocracy: Positions were awarded based on performance rather than birth</li>
+            <li theme="P">Civil Service Exam: To join the government, men had to pass exams based on Confucianism. This created the scholar gentry class</li>
+            <li theme="P">The bureaucracy eventually became so large and expensive that it drained the empire's wealth, contributing to its decline</li>
         </ul>
 
-        <h5>Economic Revolution</h5>
-        <p>Song China was the most prosperous and highly populated region in the world, largely due to a series of agricultural and technological breakthroughs.</p>
+        <h5 theme="E">Economic Revolution</h5>
+        <p theme="E">Song China was the most prosperous and highly populated region in the world, largely due to a series of agricultural and technological breakthroughs.</p>
 
-        <p><strong>Agriculture</strong></p>
+        <p theme="I T"><strong>Agriculture</strong></p>
         <ul>
-            <li>Champa Rice: fast-ripening, drought resistant strain of rice from Champa Kingdom (Vietnam), allowed 2 harvests per year. Led to a massive population explosion</li>
-            <li>The Grand Canal: An internal waterway system that connected the South to the North, boosted internal trade</li>
+            <li theme="I">Champa Rice: fast-ripening, drought resistant strain of rice from Champa Kingdom (Vietnam), allowed 2 harvests per year. Led to a massive population explosion</li>
+            <li theme="T">The Grand Canal: An internal waterway system that connected the South to the North, boosted internal trade</li>
         </ul>
-        <h4>Key Terms</h4>
+        <h4 theme="S P I C E T">Key Terms</h4>
         <div class="key-terms">
-            <span class="key-term">Champa rice</span>
-            <span class="key-term">Proto-industrialization</span>
-            <span class="key-term">Artisans</span>
-            <span class="key-term">Scholar Gentry</span>
-            <span class="key-term">Filial Piety</span>
-            <span class="key-term">Grand Canal</span>
-            <span class="key-term">Imperial Bureaucracy</span>
-            <span class="key-term">Meritocracy</span>
-            <span class="key-term">Woodblock Printing</span>
-            <span class="key-term">Foot Binding</span>
-            <span class="key-term">Buddhism</span>
-            <span class="key-term">Theravada Buddhism</span>
-            <span class="key-term">Mahayana Buddhism</span>
-            <span class="key-term">Tibetan Buddhism</span>
-            <span class="key-term">Syncretism</span>
-            <span class="key-term">Chan (Zen) Buddhism</span>
-            <span class="key-term">Neo-Confucianism</span>
-            <span class="key-term">Heian Period</span>
-            <span class="key-term">Nuclear Families</span>
-            <span class="key-term">Polygyny</span>
+            <span class="key-term" theme="I">Champa rice</span>
+            <span class="key-term" theme="E">Proto-industrialization</span>
+            <span class="key-term" theme="E">Artisans</span>
+            <span class="key-term" theme="S">Scholar Gentry</span>
+            <span class="key-term" theme="C">Filial Piety</span>
+            <span class="key-term" theme="T">Grand Canal</span>
+            <span class="key-term" theme="P">Imperial Bureaucracy</span>
+            <span class="key-term" theme="P">Meritocracy</span>
+            <span class="key-term" theme="T">Woodblock Printing</span>
+            <span class="key-term" theme="S">Foot Binding</span>
+            <span class="key-term" theme="C">Buddhism</span>
+            <span class="key-term" theme="C">Theravada Buddhism</span>
+            <span class="key-term" theme="C">Mahayana Buddhism</span>
+            <span class="key-term" theme="C">Tibetan Buddhism</span>
+            <span class="key-term" theme="C">Syncretism</span>
+            <span class="key-term" theme="C">Chan (Zen) Buddhism</span>
+            <span class="key-term" theme="C">Neo-Confucianism</span>
+            <span class="key-term" theme="P">Heian Period</span>
+            <span class="key-term" theme="S">Nuclear Families</span>
+            <span class="key-term" theme="S">Polygyny</span>
         </div>
         `,
         mcqs: [
@@ -630,6 +630,17 @@ function UnitDetails(unitId) {
         </div>
 
         <div class="content-panel active" id ="panel-${sub}-breakdown">
+
+            <div class="SPICET-filters">
+                <button class="SPICET-button active" onclick="filterSPICET('all', '${sub}', this)">All</button>
+                <button class="SPICET-button" onclick="filterSPICET('S', '${sub}', this)">Social</button>
+                <button class="SPICET-button" onclick="filterSPICET('P', '${sub}', this)">Political</button>
+                <button class="SPICET-button" onclick="filterSPICET('I', '${sub}', this)">Interaction</button>
+                <button class="SPICET-button" onclick="filterSPICET('C', '${sub}', this)">Cultural</button>
+                <button class="SPICET-button" onclick="filterSPICET('E', '${sub}', this)">Economic</button>
+                <button class="SPICET-button" onclick="filterSPICET('T', '${sub}', this)">Technology</button>
+            </div>
+
             <div class="breakdown">${data.breakdown}</div>
         </div>
 
@@ -654,7 +665,40 @@ function UnitDetails(unitId) {
     
 }
 
-function switchSub(sub, btn) {
+function filterSPICET(theme, subunitId, button)
+{
+    const panel = document.getElementById(`panel-${subunitId}-breakdown`);
+
+    if(!panel)
+        return;
+
+    panel.querySelectorAll('.SPICET-button').forEach(button => button.classList.remove('active'));
+    button.classList.add('active');
+
+    const items = panel.querySelectorAll('[theme]');
+
+    const targetTheme = theme.trim().toLowerCase();
+
+    items.forEach (item => 
+    {
+        const itemTheme = (item.getAttribute('theme') || '').trim().toLowerCase();
+        const itemThemeArray = itemTheme.split(/\s+/);
+
+        if (targetTheme === 'all' || itemThemeArray.includes(targetTheme))
+        {
+            item.style.display = '';
+            item.style.opacity = '1';
+        }
+        else 
+        {
+            item.style.display = 'none';
+        }
+    }
+    );
+}
+
+function switchSub(sub, btn) 
+{
     document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.subsection-content').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
